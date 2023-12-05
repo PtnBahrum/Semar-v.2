@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/option_container"
+    style="@style/layout_card"
+    app:cardCornerRadius="12dp"
+    android:layout_marginTop="@dimen/margin_8">
+
+   <LinearLayout
+       android:id="@+id/opsi_container"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:orientation="horizontal">
+
+       <TextView
+           android:id="@+id/tv_opsi"
+           style="@style/font_soal_kuis"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:padding="16dp"
+           android:gravity="start"
+           android:text="@string/opsions_string" />
+
+       <TextView
+           android:id="@+id/tv_quiz_option_value"
+           style="@style/font_soal_kuis"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:padding="16dp"
+           android:layout_gravity="center_horizontal"
+           android:gravity="center_horizontal"
+           android:text="@string/string_ex_option" />
+
+   </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>

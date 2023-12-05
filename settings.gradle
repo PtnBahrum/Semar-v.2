@@ -1,0 +1,24 @@
+pluginManagement {
+    repositories {
+        google()
+        mavenCentral()
+        gradlePluginPortal()
+        maven {
+            url ("https://jcenter.bintray.com")
+            maven { url 'https://jitpack.io' }
+        }
+        jcenter()
+    }
+}
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        jcenter()
+        maven { url 'https://jitpack.io' }
+        mavenCentral()
+    }
+}
+rootProject.name = "Semar v.2"
+include ':app'
+include ':curvedBottomNaviagtion'

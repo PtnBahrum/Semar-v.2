@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".features.profile.editProfile.EditProfileActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginVertical="16dp">
+
+                <androidx.appcompat.widget.AppCompatImageButton
+                    android:id="@+id/btn_backToProfil"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:layout_gravity="start"
+                    android:background="@null"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:importantForAccessibility="no"
+                    android:src="@drawable/ic_back_24dp"
+                    tools:ignore="UnusedAttribute" />
+
+                <TextView
+                    android:id="@+id/tv_edit_text_name"
+                    style="@style/font_h5_semibold"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/edit_profil"
+                    android:layout_marginStart="16dp"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+
+
+            <!--  Profile Picture  -->
+            <FrameLayout
+                android:id="@+id/btn_change_user_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginVertical="16dp">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="16dp"
+                    app:cardCornerRadius="50dp"
+                    app:cardElevation="@dimen/cardview_default_elevation">
+
+                    <ImageView
+                        android:id="@+id/iv_user_image"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:adjustViewBounds="true"
+                        android:contentDescription="@string/string_profil_picture_desc"
+                        android:scaleType="centerCrop"
+                        android:src="@mipmap/ic_launcher"
+                        tools:ignore="ImageContrastCheck" />
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="bottom|end"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:backgroundTint="@color/orange_700"
+                    app:cardCornerRadius="50dp"
+                    app:cardElevation="@dimen/cardview_default_elevation">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:adjustViewBounds="true"
+                        android:contentDescription="@string/string_btn_edit_image"
+                        android:src="@drawable/ic_edit"
+                        app:tint="@color/white"
+                        tools:ignore="ImageContrastCheck" />
+                </androidx.cardview.widget.CardView>
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:orientation="vertical">
+
+                <!--  Name Input  -->
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/input_text"
+                    app:counterTextColor="@color/white"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/name"
+                    app:boxCornerRadiusBottomEnd="12dp"
+                    app:boxCornerRadiusBottomStart="12dp"
+                    app:boxCornerRadiusTopEnd="12dp"
+                    app:boxCornerRadiusTopStart="12dp"
+                    app:counterEnabled="true"
+                    app:counterMaxLength="50"
+                    app:errorEnabled="true"
+                    app:startIconContentDescription="@string/string_field_name"
+                    app:startIconDrawable="@drawable/ic_person">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/ed_name"
+                        style="@style/font_b1_regular"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:singleLine="true"
+                        android:textColor="@color/neutral_900"
+                        android:backgroundTint="@color/white"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!--  Email Input  -->
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/input_text"
+                    app:counterTextColor="@color/white"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/string_input_hint_email"
+                    app:boxCornerRadiusBottomEnd="12dp"
+                    app:boxCornerRadiusBottomStart="12dp"
+                    app:boxCornerRadiusTopEnd="12dp"
+                    app:boxCornerRadiusTopStart="12dp"
+                    app:counterEnabled="true"
+                    app:counterMaxLength="50"
+                    app:errorEnabled="true"
+                    app:startIconContentDescription="@string/field_input_email"
+                    app:startIconDrawable="@drawable/ic_email">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/ed_email"
+                        style="@style/font_b1_regular"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textEmailAddress"
+                        android:singleLine="true"
+                        android:textColor="@color/neutral_900"
+                        android:backgroundTint="@color/white"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
+            <!--   Save Button   -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_save"
+                style="@style/font_h5_semibold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="16dp"
+                android:elevation="8dp"
+                android:maxWidth="320dp"
+                android:minWidth="260dp"
+                android:padding="16dp"
+                app:cornerRadius="8dp"
+                app:backgroundTint="@color/orange_700"
+                android:stateListAnimator="@null"
+                android:text="@string/save_update"
+                android:textColor="@color/white"
+                tools:ignore="TextContrastCheck,VisualLintButtonSize" />
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/pb_edit_profile"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0.5"
+        android:translationZ="8dp"
+        android:background="@color/black"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:progressBackgroundTint="@color/orange_700"
+            android:progressTint="@color/orange_700" />
+    </LinearLayout>
+
+</FrameLayout>

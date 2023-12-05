@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "510356107490",
+    "firebase_url": "https://semar-v2-default-rtdb.firebaseio.com",
+    "project_id": "semar-v2",
+    "storage_bucket": "semar-v2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:510356107490:android:65f268823be7b8614beebb",
+        "android_client_info": {
+          "package_name": "com.example.semarv2"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "510356107490-i34jb32uvujajj8o93gq3lbphqq1s228.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.semarv2",
+            "certificate_hash": "baf9a5ff8d381ac8b68fde5703edff4da30783e8"
+          }
+        },
+        {
+          "client_id": "510356107490-rv9dle66nqi46b1nibmgq495rvpf1hms.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD1ySVmzUN9W9RHesNQ1mVc3MtUynk1U5E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "510356107490-rv9dle66nqi46b1nibmgq495rvpf1hms.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

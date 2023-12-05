@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    style="@style/layout"
+    tools:context=".features.videos.detail.VideoDetailActivity">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <!--Toolbar-->
+            <com.google.android.material.appbar.MaterialToolbar
+                android:id="@+id/custom_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent">
+
+                <ImageButton
+                    android:id="@+id/btn_backToHome"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:layout_gravity="start"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:importantForAccessibility="no"
+                    android:src="@drawable/ic_back_24dp"/>
+
+                <TextView
+                    android:id="@+id/video_name_toolbar"
+                    style="@style/font_h6_semibold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="16dp"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="@string/string_header_video_name"
+                    android:textColor="@color/neutral_50" />
+            </com.google.android.material.appbar.MaterialToolbar>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
+                        android:id="@+id/youtube_player_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:enableAutomaticInitialization="false"
+                        android:transitionName="video"/>
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="16dp"
+                        style="@style/layout_card_list"
+                        app:cardElevation="8dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:layout_marginTop="24dp">
+
+                            <View
+                                style="@style/custom_line"
+                                android:layout_width="match_parent"
+                                android:layout_height="3dp"
+                                android:layout_marginHorizontal="8dp"
+                                android:layout_marginTop="12dp" />
+                            <View
+                                style="@style/custom_line"
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:layout_marginHorizontal="8dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginBottom="8dp" />
+
+                            <TextView
+                                android:id="@+id/tv_name_video"
+                                style="@style/font_h6_semibold"
+                                android:layout_width="wrap_content"
+                                android:layout_marginHorizontal="8dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:text="@string/string_header_video_name"
+                                android:transitionName="videoName"/>
+
+                            <View
+                                style="@style/custom_line"
+                                android:layout_width="match_parent"
+                                android:layout_height="3dp"
+                                android:layout_marginHorizontal="8dp"
+                                android:layout_marginTop="5dp" />
+
+                            <View
+                                style="@style/custom_line"
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:layout_marginHorizontal="8dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginBottom="8dp" />
+
+                            <TextView
+                                style="@style/font_b1_semibold"
+                                android:layout_width="wrap_content"
+                                android:layout_marginHorizontal="8dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="start"
+                                android:gravity="center"
+                                android:text="@string/translate"
+                                android:transitionName="videoName"/>
+
+                            <ScrollView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginHorizontal="16dp"
+                                android:layout_marginTop="8dp">
+
+                                <TextView
+                                    android:id="@+id/tv_desc"
+                                    style="@style/font_b2_regular"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="start"
+                                    android:gravity="start"
+                                    android:text="@string/string_desc_wayang_video"
+                                    android:transitionName="videoName"/>
+                            </ScrollView>
+
+                        </LinearLayout>
+                    </com.google.android.material.card.MaterialCardView>
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/pb_video_detail"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:alpha="0.5"
+                    android:translationZ="8dp"
+                    android:background="@color/black"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:visibility="visible"
+                   >
+
+                    <ProgressBar
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:progressBackgroundTint="@color/orange_700"
+                        android:progressTint="@color/orange_700" />
+                </LinearLayout>
+            </FrameLayout>
+        </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/full_screen_view_container"
+        android:background="@color/black"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+</FrameLayout>

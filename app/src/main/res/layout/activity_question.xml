@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    style="@style/layout"
+    tools:context=".features.kuis.QuestionActivity">
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/btn_backToList"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_gravity="start"
+            android:background="@null"
+            android:foreground="?attr/selectableItemBackground"
+            android:importantForAccessibility="no"
+            android:src="@drawable/ic_back_24dp"
+            tools:ignore="UnusedAttribute" />
+
+        <TextView
+            style="@style/font_h6_semibold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginHorizontal="8dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="@string/string_item_quiz_header"
+            android:textColor="@color/neutral_50" />
+    </LinearLayout>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="80dp"
+        style="@style/layout_card_list"
+        app:cardElevation="8dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginTop="15dp"
+            android:layout_marginHorizontal="8dp">
+
+            <com.google.android.material.progressindicator.LinearProgressIndicator
+                android:id="@+id/pb_progres"
+                style="@style/custom_progress_linear"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:progress="10"
+                app:trackCornerRadius="20dp"
+                app:trackThickness="20dp"/>
+
+            <TextView
+                android:id="@+id/tv_halamansoal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:layout_gravity="end"
+                android:text="@string/default_number"
+                style="@style/font_b1_regular"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.497"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+                style="@style/custom_line"
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:layout_marginTop="5dp"/>
+            <View
+                style="@style/custom_line"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="5dp" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="4dp"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="60dp"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    tools:listitem="@layout/item_content_soal"
+                    app:layout_constraintBottom_toBottomOf="@+id/container_botton"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+<!--                <ScrollView-->
+<!--                    android:id="@+id/nestedScrollView"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="0dp"-->
+<!--                    android:fillViewport="true"-->
+<!--                    android:layout_marginBottom="60dp"-->
+<!--                    >-->
+
+<!--                    -->
+<!--                </ScrollView>-->
+
+                <LinearLayout
+                    android:id="@+id/container_botton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <com.google.android.material.button.MaterialButton
+                            android:visibility="visible"
+                            style="@style/btn_prev_style"
+                            android:id="@+id/btn_prev"
+                            app:cornerRadius="8dp"
+                            android:drawableLeft="@drawable/ic_arrow_back"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="4dp"
+                            android:paddingVertical="8dp"
+                            android:text="@string/previous_string"
+                            android:textAppearance="@style/font_b2_regular"
+                            android:textAllCaps="false"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            android:textColor="@color/white"/>
+
+                        <com.google.android.material.button.MaterialButton
+                            android:visibility="visible"
+                            android:id="@+id/btn_next"
+                            style="@style/btn_next_style"
+                            app:cornerRadius="8dp"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="4dp"
+                            android:paddingVertical="8dp"
+                            android:text="@string/next_string"
+                            android:drawableEnd="@drawable/ic_arrow_logout"
+                            android:textAppearance="@style/font_b2_regular"
+                            android:textAllCaps="false"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            android:textColor="@color/white"/>
+
+                        <com.google.android.material.button.MaterialButton
+                            android:visibility="invisible"
+                            android:id="@+id/btn_submit"
+                            app:backgroundTint="@color/brown_700"
+                            app:cornerRadius="8dp"
+                            android:layout_width="0dp"
+                            android:paddingVertical="8dp"
+                            android:paddingHorizontal="42dp"
+                            android:layout_height="wrap_content"
+                            android:text="@string/submit_string"
+                            android:textAllCaps="false"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            android:textAppearance="@style/font_b2_regular"
+                            app:layout_constraintRight_toRightOf="parent"
+                            android:textColor="@color/white"/>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </LinearLayout>
+
+
+
+<!--                <com.google.android.material.floatingactionbutton.FloatingActionButton-->
+<!--                    android:id="@+id/btn_prev"-->
+<!--                    android:layout_marginStart="4dp"-->
+<!--                    android:layout_marginBottom="36dp"-->
+<!--                    android:backgroundTint="@color/neutral_700"-->
+<!--                    android:tint="@color/white"-->
+<!--                    app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                    app:layout_constraintStart_toStartOf="parent"-->
+<!--                    app:srcCompat="@drawable/ic_arrow_back"-->
+<!--                    android:clickable="true"-->
+<!--                    android:focusable="true"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content">-->
+<!--                </com.google.android.material.floatingactionbutton.FloatingActionButton>-->
+
+
+<!--                <com.google.android.material.floatingactionbutton.FloatingActionButton-->
+<!--                    android:id="@+id/btn_next"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginBottom="36dp"-->
+<!--                    android:backgroundTint="@color/orange_700"-->
+<!--                    android:tint="@color/white"-->
+<!--                    app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                    app:layout_constraintEnd_toEndOf="parent"-->
+<!--                    app:srcCompat="@drawable/ic_arrow"-->
+<!--                    android:clickable="true"-->
+<!--                    android:focusable="true"-->
+<!--                    android:contentDescription="TODO">-->
+<!--                </com.google.android.material.floatingactionbutton.FloatingActionButton>-->
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+
+        <ProgressBar
+            android:id="@+id/pb_quiz"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="gone"
+            android:translationZ="10dp"
+            android:progressTint="@color/orange_700"
+            android:background="@color/white"/>
+    </com.google.android.material.card.MaterialCardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

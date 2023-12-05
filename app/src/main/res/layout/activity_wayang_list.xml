@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    style="@style/layout"
+    tools:context=".features.wayang.WayangListActivity">
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/btn_backToHome"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_gravity="start"
+        android:layout_margin="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:background="@null"
+        android:foreground="?attr/selectableItemBackground"
+        android:importantForAccessibility="no"
+        android:src="@drawable/ic_back_24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="UnusedAttribute" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="70dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btn_backToHome"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            style="@style/font_h6_semibold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/wayang_character"
+            android:textColor="@color/neutral_50" />
+
+        <TextView
+            style="@style/font_b2_regular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/string_intro_list_wayang"
+            android:textColor="@color/neutral_50" />
+    </LinearLayout>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="135dp"
+        style="@style/layout_card_list"
+        app:cardElevation="8dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/font_h5_semibold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginHorizontal="16dp"
+                android:textAllCaps="true"
+                android:text="@string/wayang_kulit" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_wayang"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginHorizontal="12dp"
+                android:layout_marginTop="16dp"
+                android:paddingVertical="8dp"
+                app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                app:spanCount="3"
+                tools:listitem="@layout/item_wayang" />
+        </LinearLayout>
+
+        <ProgressBar
+            android:id="@+id/pb_wayang"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="?attr/actionBarSize"
+            android:visibility="gone"/>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <ImageView
+        android:layout_width="164dp"
+        android:layout_height="164dp"
+        android:minHeight="164dp"
+        android:minWidth="164dp"
+        android:layout_marginTop="47dp"
+        android:layout_marginEnd="-50dp"
+        android:src="@drawable/onboarding_image_1"
+        android:contentDescription="@string/wayang_kulit"
+        android:translationZ="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="VisualLintBounds" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

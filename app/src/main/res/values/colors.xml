@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!--box input color-->
+    <color name="hint_color">#212427</color>
+    <color name="stroke_color">#C6B6A8</color>
+
+    <!--color untuk gradient background-->
+    <color name="dark_brown_700">#592907</color>
+    <color name="dark_brown_900">#2D1300</color>
+
+    <!--color primary-->
+    <color name="brown_500">#B8550F</color>
+    <color name="brown_700">#893F0B</color>
+    <color name="brown_900">#592907</color>
+
+    <!--color secondary-->
+    <color name="orange_50">#FFF7CC</color>
+    <color name="orange_200">#FFEF99</color>
+    <color name="orange_300">#F0873D</color>
+    <color name="orange_500">#E86B12</color>
+    <color name="orange_700">#C55200</color>
+
+    <!--color success-->
+    <color name="success_50">#F3FCF5</color>
+    <color name="success_300">#CAF1D6</color>
+    <color name="success_500">#A2E7B6</color>
+    <color name="success_700">#79DC96</color>
+    <color name="success_900">#51D277</color>
+
+    <!--color warning-->
+    <color name="warning_50">#FFE0BD</color>
+    <color name="warning_300">#FFC98A</color>
+    <color name="warning_500">#FFB257</color>
+    <color name="warning_700">#FF9B24</color>
+    <color name="warning_900">#EE8100</color>
+
+    <!--color error-->
+    <color name="error_50">#E4AAAA</color>
+    <color name="error_300">#D88383</color>
+    <color name="error_500">#CC5C5C</color>
+    <color name="error_700">#BB3B3B</color>
+    <color name="error_900">#932E2E</color>
+    
+    <!--color neutral-->
+    <color name="neutral_50">#F8FAFC</color>
+    <color name="neutral_100">#F1F5F9</color>
+    <color name="neutral_200">#E2E8F0</color>
+    <color name="neutral_300">#CBD5E1</color>
+    <color name="neutral_400">#94A3B8</color>
+    <color name="neutral_500">#64748B</color>
+    <color name="neutral_600">#475569</color>
+    <color name="neutral_700">#334155</color>
+    <color name="neutral_800">#1E293B</color>
+    <color name="neutral_900">#0F172A</color>
+
+    <!--color neutral-->
+    <color name="neutral_50_transparent">#3FF8FAFC</color>
+
+    <!--dark-->
+    <color name="dark_brown">#2D1300</color>
+    <color name="brown_dark_card">#47240C</color>
+
+
+</resources>

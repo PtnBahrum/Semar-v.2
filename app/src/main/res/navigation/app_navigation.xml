@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/app_navigation"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.semarv2.features.home.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/scanFragment"
+        android:name="com.example.semarv2.features.scan.ScanFragment"
+        android:label="ScanFragment" >
+        <action
+            android:id="@+id/action_scanFragment_to_resultTempFragment2"
+            app:destination="@id/resultTempFragment" />
+        <action
+            android:id="@+id/action_scanFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.semarv2.features.profile.ProfileFragment"
+        android:label="ProfileFragment" />
+    <fragment
+        android:id="@+id/resultTempFragment"
+        android:name="com.example.semarv2.features.scan.ResultTempFragment"
+        android:label="ResultTempFragment"
+        tools:layout="@layout/fragment_result_temp" >
+        <action
+            android:id="@+id/action_resultTempFragment_to_scanFragment"
+            app:destination="@id/scanFragment" />
+    </fragment>
+
+</navigation>

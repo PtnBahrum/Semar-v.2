@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card_wayang"
+    style="@style/layout_card_wayang_list"
+    android:layout_width="100dp"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="10dp"
+    android:layout_gravity="center"
+    android:layout_marginHorizontal="8dp"
+    android:layout_marginVertical="8dp"
+    android:elevation="12dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical">
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="92dp"
+            android:layout_height="94dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginHorizontal="4dp">
+
+            <ImageView
+                android:id="@+id/iv_wayang_karakter"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/img_card_wayang"
+                android:scaleType="centerCrop"
+                android:contentDescription="@string/string_image_wayang"/>
+        </com.google.android.material.card.MaterialCardView>
+
+        <TextView
+            android:id="@+id/tv_wayang_name"
+            style="@style/item_wayang_text"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginVertical="4dp"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxLines="1"
+            android:text="@string/string_wayang_character_name"/>
+
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

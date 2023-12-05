@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Semar</string>
+    <string name="application_logo">Logo Aplikasi</string>
+    <string name="application_name">Nama Aplikasi</string>
+
+    //Onboarding String
+    <string name="onboarding_slide1_title">Kenali Berbagai Cerita Tokoh-Tokoh Wayang Kulit</string>
+    <string name="onboarding_slide2_title">Temukan Kemudahan Mendapatkan Materi Belajar Wayang Kulit</string>
+    <string name="onboarding_slide3_title">Uji Pengetahuanmu Seputar Wayang Kulit Dengan Kuis</string>
+    <string name="onboarding_slide1_desc">Semar membantu pengguna untuk menemukan Informasi seputar tokoh-tokoh wayang kulit dari berbagai cerita</string>
+    <string name="onboarding_slide2_desc">Semar membantu pengguna untuk menemukan berbagai materi belajar tentang wayang kulit dengan mudah dan cepat</string>
+    <string name="onboarding_slide3_desc">Semar membantu pengguna untuk menguji pengetahuan pengguna tentang wayang kulit dengan mengerjakan kuis</string>
+    <string name="ayo_mulai">Ayo Mulai</string>
+    <string name="selanjutnya">Lanjut</string>
+    <string name="lewatkan">Lewatkan</string>
+
+    //Login dan Regiter String
+    <string name="login">Masuk</string>
+    <string name="string_input_hint_email">Email</string>
+    <string name="string_hint_password">Password</string>
+    <string name="forget_password">Lupa Password?</string>
+    <string name="or">Atau</string>
+    <string name="login_with_google">Masuk dengan Google</string>
+    <string name="no_account_question">Belum memiliki akun?</string>
+    <string name="register">Daftar</string>
+    <string name="register_name_page">Daftarkan Akun</string>
+    <string name="name">Nama</string>
+    <string name="string_input_confirmation_password">Konfirmasi Password</string>
+    <string name="string_register">Daftar</string>
+    <string name="need_account">Anda sudah memiliki akun?</string>
+    <string name="to_login">Anda dapat masuk menggunakan akun yang telah dibuat</string>
+    <string name="success_register_message">Akun Berhasil di Buat!</string>
+
+    //Home String
+    <string name="profile_photo">Foto Profil</string>
+    <string name="hello_name">Hi, User👋🏻</string>
+
+    //Wayang List String
+    <string name="go_view_string">Yuk, kita eksplor dunia Wayang bersama!</string>
+    <string name="banner_text_judul">Sejarah Wayang Kulit</string>
+    //Item List Wayang String
+    <string name="wayang_character">Karakter Wayang</string>
+    <string name="string_intro_list_wayang">Tokoh-tokoh unik yang mempesona dalam budaya Indonesia</string>
+    <string name="string_wayang_character_name">Gatot Kaca</string>
+    <string name="string_image_wayang">Gambar Karakter Wayang</string>
+    <string name="wayang_kulit">Wayang Kulit</string>
+    //Wayang Detail String
+    <string name="string_view">Rangkuman</string>
+    <string name="string_name_wayang">Arjuna</string>
+    <string name="name_string">Nama</string>
+    <string name="string_behavior">Sifat/Karakteristik</string>
+    <string name="parent">Ayah dan Ibu</string>
+    <string name="brother">Relasi</string>
+    <string name="image_string">Gambar</string>
+    <string name="description">Deskripsi</string>
+
+    //Materi List String
+    <string name="materi">Materi</string>
+    <string name="content_banner_string">Wayang Kulit Pertama kali diperkenalkan oleh sunan kalijaga pada tahun 1890-an.</string>
+    <string name="learn_material">Materi Belajar</string>
+    <string name="string_intro_learn_list">Karakter wayang dalam Keseharian serta menghubungkan diri dengan Seni.</string>
+    <string name="string_intro">Kesenian tradisional wayang kulit lahir, hidup, tumbuh, berkembang terutama dalam masyarakat Jawa. Lebih dari sekadar pertunjukan, wayang kulit dahulu merupakan media permenungan menuju roh spiritual para dewa.</string>
+    <string name="string_icon_materi">Gambar Ikon Materi</string>
+
+    //Navigation Bar String
+    <string name="home">Beranda</string>
+    <string name="scan">Pemindai</string>
+    <string name="profile">Profil</string>
+
+    //Scan String
+    <string name="string_scan_result">Hasil Prediksi :</string>
+    <string name="predict_result">Arjuna</string>
+    <string name="detail_string">Detail</string>
+    <string name="progres_scan_string">Sedang Diproses</string>
+
+    //Profile String
+    <string name="string_photo_profile">Foto Profil</string>
+    <string name="name_profile">Name</string>
+    <string name="email_profile_string">raixard@foxmail.com</string>
+    <string name="string_setting">Pengaturan</string>
+    <string name="profile_edit_string">Edit Profil</string>
+    <string name="string_edit_password">Edit Password</string>
+    <string name="dark_mode">Mode Gelap</string>
+    <string name="language_string">Bahasa Indonesia</string>
+    <string name="log_out">Keluar</string>
+
+    //Error Scan
+    <string name="error_happened">Terjadi kesalahan</string>
+    <string name="error_choose_photo">Mohon untuk memilih foto</string>
+    <string name="error_permission_denied">Tidak mendapatkan izin</string>
+    <string name="input_choose_from_gallery">Ambil dari galeri</string>
+    <string name="scan_error_capture_fail">Gagal memotret foto</string>
+    <string name="scan_error_bind_camera_fail">Gagal mengaktifkan kamera</string>
+    <string name="scan_error_prediction">Prediksi gagal</string>
+
+    //Quiz String
+    <string name="quiz">Kuis</string>
+    <string name="string_intro_list_quiz">Uji Pengetahuanmu tentang Karakter Wayang dalam Kuis Ini!</string>
+    <string name="string_item_quiz_header">Kuis 1 : Sejarah Wayang</string>
+    <string name="start_quiz">Mulai Kuis</string>
+    <string name="string_icon_quiz">Gambar Ikon Quiz</string>
+    <string name="string_ex_question">Istilah “wayang” berasal dari kata “ma Hyang” yang berarti …</string>
+    <string name="previous_string">Sebelumnya</string>
+    <string name="next_string">Selanjutnya</string>
+    <string name="submit_string">Kumpulkan</string>
+    <string name="string_ex_option">Menuju spiritualis sang Kuasa</string>
+    <string name="success_quiz">Berhasil Menyelesaikan Kuis</string>
+    <string name="great_quiz">Selamat anda lulus!</string>
+    <string name="your_score_string">Anda memperoleh skor :</string>
+    <string name="string_ex_score">100</string>
+    <string name="back_string">Kembali</string>
+    <string name="opsions_string">A</string>
+    <string name="replay">Mulai Lagi</string>
+    <string name="default_number" translatable="false">- / -</string>
+    <string name="string_you_are_sure">Apakah Kamu Yakin?</string>
+    <string name="message_kuis_out">Jika Kamu Menekan iya, Maka Data akan Hilang</string>
+    <string name="string_quiz_finish">Apakah Kamu Sudah Yakin Dengan Jawabanmu ?</string>
+
+    //Video String
+    <string name="string_header_intro_learn">Sejarah Wayang Kulit</string>
+    <string name="string_video_header">Video Pertunjukkan</string>
+    <string name="string_intro_video_list">Jelajahi karakter wayang dalam video pertunjukan yang indah</string>
+    <string name="string_header_video_name">Pitutur Jawa Bijak : Semar Tentang Kehidupan Bermasyarakat</string>
+    <string name="translate">Penjelasan :</string>
+    <string name="string_desc_wayang_video">Pitutur pertama, sikap hidup agar setiap orang rendah hati atau andhap asor. Orang tidak boleh merasa diri paling hebat dan tidak sombong.</string>
+
+    //String Register Error
+    <string name="error_name_null">Silahkan isi nama terlebih dahulu!</string>
+    <string name="error_email_null">Silahkan isi email terlebih dahulu!</string>
+    <string name="error_password_null">Silahkan isi password terlebih dahulu!</string>
+    <string name="error_konfirmasi_password_null">Silahkan isi konfirmasi password terlebih dahulu!</string>
+    <string name="error_email_invalid">Email tidak valid!</string>
+    <string name="error_password_invalid">Password harus lebih dari 8 karakter!</string>
+    <string name="error_konfirmasi_password_invalid">Konfirmasi password berbeda dengan password!</string>
+    <string name="register_fail">Registrasi gagal, mohon coba lagi!</string>
+    <string name="yes">Ya</string>
+    <string name="logout_message">Apakah anda yakin ingin keluar?</string>
+    <string name="no">Tidak</string>
+    <string name="score_string">Nilai :</string>
+    <string name="_score">100</string>
+    <string name="success">Oke</string>
+    <string name="success_reset_password">Permintaan Reset Password Berhasil!</string>
+    <string name="reset_message">Silahkan cek email anda, email reset password telah dikirim!</string>
+
+    //Profile String Error
+    <string name="oldPasswordEmpty">Silahkan masukkan password lama terlebih dahulu!</string>
+    <string name="newPasswordEmpty">Silahkan masukkan password baru anda!</string>
+    <string name="editPasswordSuccess">Password Berhasil di-Update!</string>
+    <string name="editProfilSuccess">Profil Berhasil di-Update!</string>
+
+    //Forgot Password String
+    <string name="forgotPasswordMessage">Silahkan cek email anda, tautan reset password telah terkirim!</string>
+    <string name="botton_close">Tombol Tutup</string>
+    <string name="forget_password_name">Lupa Password</string>
+    <string name="string_information_forget_password">Masukkan email terdaftar untuk melakukan lupa password. Tautan reset password akan dikirimkan ke email anda.</string>
+    <string name="kirim">Kirim</string>
+
+    //Register Message
+    <string name="registerMessage">Silahkan melakukan login dengan akun yang telah anda buat!</string>
+
+    //Profile String
+    <string name="edit_profil">Edit Profil</string>
+    <string name="string_profil_picture_desc">Foto Profil</string>
+    <string name="string_btn_edit_image">Tombol Edit Foto</string>
+    <string name="string_field_name">Kolom Nama</string>
+    <string name="field_input_email">Kolom Input Email</string>
+    <string name="confirmation_string">Masukkan Password</string>
+    <string name="field_password_konfirmasi">Kolom Password Konfirmasi</string>
+    <string name="save_update">Simpan</string>
+    <string name="string_edit_password_header">Edit Password</string>
+    <string name="string_old_password">Password Lama</string>
+    <string name="string_field_opassword">Kolom Input Password</string>
+    <string name="string_confirm_password">Konfirmasi Password</string>
+    <string name="string_new_password">Password Baru</string>
+    <string name="field_input_nPassword">Kolom Input Password Baru</string>
+    <string name="success_change_profile">Update Profil Berhasil</string>
+    <string name="success_change_password">Update Password Berhasil</string>
+
+    //Result String
+    <string name="message_full_score">Horee!!!, kamu telah mendapatkan nilai yang sempurna, pertahankan nilaimu!</string>
+    <string name="message_high_score">Semangat, kamu telah memperoleh nilai yang cukup tinggi, tingkatkan lagi belajarmu!</string>
+    <string name="message_low_score">Walaupun nilaimu masih rendah, jangan patah semangat untuk terus belajar yak!!!</string>
+    <string name="message_graduation">Selamat kamu lulus!</string>
+    <string name="message_fail">Yah, kamu belum lulus!</string>
+
+    //About String Collection
+    <string name="about_app">Tentang Kami</string>
+    <string name="about">Tentang</string>
+    <string name="version">Versi</string>
+    <string name="version_latest">For Student 0.2.1 (05/12/2023 23.11)</string>
+    <string name="privacy_policy">Kebijakan Privasi</string>
+    <string name="about_app_semar">Tentang Aplikasi</string>
+    <string name="support_center">Pusat Bantuan</string>
+    <string name="faq" translatable="false">FAQ</string>
+
+
+</resources>

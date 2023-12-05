@@ -1,0 +1,418 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.SemarV2" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="colorPrimary">@color/brown_900</item>
+    </style>
+
+    <style name="Theme.SemarV2" parent="Base.Theme.SemarV2" />
+
+    <!--Custom Dialog Card Style-->
+    <style name="layout_card">
+        <item name="android:background">@color/orange_50</item>
+        <item name="android:backgroundTint">@color/orange_50</item>
+        <item name="cardBackgroundColor">@color/orange_50</item>
+    </style>
+
+    <!--Custom Main Layout Style-->
+    <style name="layout">
+        <item name="android:background">@drawable/bg_main</item>
+        <item name="titleTextColor">@color/neutral_50</item>
+    </style>
+
+    <!--Custom Detail Wayang Layout Style-->
+    <style name="layout_detail">
+        <item name="android:background">@drawable/bg_wayang_2</item>
+        <item name="android:scaleType">centerCrop</item>
+        <item name="titleTextColor">@color/neutral_50</item>
+    </style>
+
+    <!--Header Layout Style-->
+    <style name="header_home">
+        <item name="titleTextColor">@color/neutral_50</item>
+        <item name="color">@color/neutral_50</item>
+    </style>
+
+    <!-- Theme for OnBoardingActivity (applying some transition) -->
+    <style name="Theme.SemarV2.Onboarding">
+        <item name="android:windowSharedElementsUseOverlay">false</item>
+        <item name="android:windowContentTransitions">true</item>
+
+        <item name="android:windowExitTransition">@transition/activity_main_exit</item>
+        <item name="android:windowReenterTransition">@transition/activity_main_reenter</item>
+    </style>
+    <!--Styling TextInputLayout colors-->
+    <style name="Widget.MaterialComponents.Button.TextButton.OnBoardTextButton"
+        parent="Widget.MaterialComponents.Button.TextButton">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/neutral_50</item>
+    </style>
+
+    <!--Styling Font App-->
+    <!--Heading-->
+
+    <!--Bold-->
+    <style name="font_h1_bold" parent="@style/TextAppearance.AppCompat">
+        <item name="android:textSize">32sp</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:fontFamily">@font/poppins_bold</item>
+        <item name="android:textColor">@color/brown_900</item>
+    </style>
+    <style name="font_h2_bold" parent="@style/TextAppearance.AppCompat">
+        <item name="android:textSize">28sp</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:fontFamily">@font/poppins_bold</item>
+        <item name="android:textColor">@color/brown_900</item>
+    </style>
+    <style name="font_h3_bold" parent="@style/TextAppearance.AppCompat">
+        <item name="android:textSize">24sp</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:fontFamily">@font/poppins_bold</item>
+        <item name="android:textColor">@color/brown_900</item>
+    </style>
+    <style name="font_h4_bold" parent="@style/TextAppearance.AppCompat">
+        <item name="android:textSize">20sp</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:fontFamily">@font/poppins_bold</item>
+        <item name="android:textColor">@color/brown_900</item>
+    </style>
+    <style name="font_h5_bold" parent="@style/TextAppearance.AppCompat">
+        <item name="android:textSize">18sp</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:fontFamily">@font/poppins_bold</item>
+        <item name="android:textColor">@color/brown_900</item>
+    </style>
+    <style name="font_h6_bold" parent="@style/TextAppearance.AppCompat">
+        <item name="android:textSize">16sp</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:fontFamily">@font/poppins_bold</item>
+        <item name="android:textColor">@color/brown_900</item>
+    </style>
+
+    <!--SemiBold-->
+    <style name="font_h1_semibold" parent="@style/TextAppearance.AppCompat">
+        <item name="android:textSize">32sp</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:fontFamily">@font/poppins_semibold</item>
+        <item name="android:textColor">@color/brown_900</item>
+    </style>
+    <style name="font_h2_semibold" parent="@style/TextAppearance.AppCompat">
+        <item name="android:textSize">28sp</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:fontFamily">@font/poppins_semibold</item>
+        <item name="android:textColor">@color/brown_900</item>
+    </style>
+    <style name="font_h3_semibold" parent="@style/TextAppearance.AppCompat">
+        <item name="android:textSize">24sp</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:fontFamily">@font/poppins_semibold</item>
+        <item name="android:textColor">@color/brown_900</item>
+    </style>
+    <style name="font_h4_semibold" parent="@style/TextAppearance.AppCompat">
+        <item name="android:textSize">20sp</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:fontFamily">@font/poppins_semibold</item>
+        <item name="android:textColor">@color/brown_900</item>
+    </style>
+    <style name="font_h5_semibold" parent="@style/TextAppearance.AppCompat">
+        <item name="android:textSize">18sp</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:fontFamily">@font/poppins_semibold</item>
+        <item name="android:textColor">@color/brown_900</item>
+    </style>
+    <style name="font_h6_semibold" parent="@style/TextAppearance.AppCompat">
+        <item name="android:textSize">16sp</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:fontFamily">@font/poppins_semibold</item>
+        <item name="android:textColor">@color/brown_900</item>
+    </style>
+
+    <!--Regular-->
+    <style name="font_h1_regular" parent="@style/TextAppearance.AppCompat">
+        <item name="android:textSize">32sp</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:fontFamily">@font/poppins_regular</item>
+        <item name="android:textColor">@color/brown_900</item>
+    </style>
+    <style name="font_h2_regular" parent="@style/TextAppearance.AppCompat">
+        <item name="android:textSize">28sp</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:fontFamily">@font/poppins_regular</item>
+        <item name="android:textColor">@color/brown_900</item>
+    </style>
+    <style name="font_h3_regular" parent="@style/TextAppearance.AppCompat">
+        <item name="android:textSize">24sp</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:fontFamily">@font/poppins_regular</item>
+        <item name="android:textColor">@color/brown_900</item>
+    </style>
+    <style name="font_h4_regular" parent="@style/TextAppearance.AppCompat">
+        <item name="android:textSize">20sp</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:fontFamily">@font/poppins_regular</item>
+        <item name="android:textColor">@color/brown_900</item>
+    </style>
+    <style name="font_h5_regular" parent="@style/TextAppearance.AppCompat">
+        <item name="android:textSize">18sp</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:fontFamily">@font/poppins_regular</item>
+        <item name="android:textColor">@color/brown_900</item>
+    </style>
+    <style name="font_h6_regular" parent="@style/TextAppearance.AppCompat">
+        <item name="android:textSize">16sp</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:fontFamily">@font/poppins_regular</item>
+        <item name="android:textColor">@color/brown_900</item>
+    </style>
+
+    <!--Body-->
+
+    <!--Bold-->
+    <style name="font_b1_bold" parent="@style/TextAppearance.AppCompat">
+        <item name="android:textSize">14sp</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:fontFamily">@font/poppins_bold</item>
+        <item name="android:textColor">@color/brown_900</item>
+    </style>
+    <style name="font_b2_bold" parent="@style/TextAppearance.AppCompat">
+        <item name="android:textSize">12sp</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:fontFamily">@font/poppins_bold</item>
+        <item name="android:textColor">@color/brown_900</item>
+    </style>
+    <style name="font_b3_bold" parent="@style/TextAppearance.AppCompat">
+        <item name="android:textSize">10sp</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:fontFamily">@font/poppins_bold</item>
+        <item name="android:textColor">@color/brown_900</item>
+    </style>
+
+    <!--SemiBold-->
+    <style name="font_b1_semibold" parent="@style/TextAppearance.AppCompat">
+        <item name="android:textSize">14sp</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:fontFamily">@font/poppins_semibold</item>
+        <item name="android:textColor">@color/brown_900</item>
+    </style>
+    <style name="font_b2_semibold" parent="@style/TextAppearance.AppCompat">
+        <item name="android:textSize">12sp</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:fontFamily">@font/poppins_semibold</item>
+        <item name="android:textColor">@color/brown_900</item>
+    </style>
+    <style name="font_b3_semibold" parent="@style/TextAppearance.AppCompat">
+        <item name="android:textSize">10sp</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:fontFamily">@font/poppins_semibold</item>
+        <item name="android:textColor">@color/brown_900</item>
+    </style>
+
+    <!--Regular-->
+    <style name="font_b1_regular" parent="@style/TextAppearance.AppCompat">
+        <item name="android:textSize">14sp</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:fontFamily">@font/poppins_regular</item>
+        <item name="android:textColor">@color/brown_900</item>
+    </style>
+    <style name="font_b2_regular" parent="@style/TextAppearance.AppCompat">
+        <item name="android:textSize">12sp</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:fontFamily">@font/poppins_regular</item>
+        <item name="android:textColor">@color/brown_900</item>
+    </style>
+    <style name="font_b3_regular" parent="@style/TextAppearance.AppCompat">
+        <item name="android:textSize">10sp</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:fontFamily">@font/poppins_regular</item>
+        <item name="android:textColor">@color/brown_900</item>
+    </style>
+
+    <style name="item_wayang_text" parent="@style/TextAppearance.AppCompat">
+        <item name="android:textSize">10sp</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:fontFamily">@font/poppins_regular</item>
+        <item name="android:textColor">@color/neutral_900</item>
+    </style>
+
+    <style name="font_wayang_description" parent="@style/TextAppearance.AppCompat">
+        <item name="android:textSize">12sp</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:fontFamily">@font/poppins_regular</item>
+        <item name="android:textColor">@color/neutral_900</item>
+    </style>
+
+    <style name="font_soal_kuis" parent="@style/TextAppearance.AppCompat">
+        <item name="android:textSize">14sp</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:fontFamily">@font/poppins_regular</item>
+        <item name="android:textColor">@color/neutral_900</item>
+    </style>
+
+    <!--Input Text Column Style-->
+
+    <style name="input_text" parent="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="android:textColorHint">@color/hint_color</item>
+        <item name="boxBackgroundColor">?attr/colorOnPrimary</item>
+        <item name="boxStrokeColor">@color/stroke_color</item>
+        <item name="hintTextColor">@color/hint_color</item>
+        <item name="passwordToggleTint">@color/neutral_300</item>
+        <item name="placeholderTextColor">@color/hint_color</item>
+        <item name="startIconTint">@color/neutral_800</item>
+    </style>
+
+    <!--Gallery Button Style-->
+    <style name="image_galery">
+        <item name="srcCompat">@drawable/ic_gallery</item>
+    </style>
+
+    <!--Capture Button Style-->
+    <style name="btn_capture">
+        <item name="srcCompat">@drawable/ic_btn_capture</item>
+        <item name="android:layout_width">80dp</item>
+        <item name="android:layout_height">80dp</item>
+    </style>
+
+    <!--Snackbar Massage Scan Result Style-->
+    <style name="nav">
+        <item name="android:background">@color/brown_500</item>
+        <item name="android:backgroundTint">@color/orange_50</item>
+    </style>
+
+    <!--Button Go To Detail From Scan Style-->
+    <style name="btn_goToDetail">
+        <item name="android:backgroundTint">@color/warning_900</item>
+        <item name="textAllCaps">false</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="titleTextAppearance">@style/font_b1_regular</item>
+    </style>
+
+    <!--Button Ok Reset Password Style-->
+    <style name="btn_ok">
+        <item name="android:backgroundTint">@color/brown_900</item>
+        <item name="textAllCaps">false</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <!--Button Yes Style-->
+    <style name="btn_yes">
+        <item name="android:backgroundTint">@color/error_900</item>
+        <item name="textAllCaps">false</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <!--Button Logout Style-->
+    <style name="btn_logout">
+        <item name="android:backgroundTint">@color/error_900</item>
+        <item name="textAllCaps">false</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <!--Button No Style-->
+    <style name="btn_no">
+        <item name="android:backgroundTint">@color/brown_700</item>
+        <item name="textAllCaps">false</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <!--Button Wayang Karakter Style-->
+    <style name="btn_wayang_karakter" parent="">
+        <item name="android:background">@drawable/custom_btn_wayang_karakter</item>
+    </style>
+
+    <!--Button Kuis Style-->
+    <style name="btn_kuis" parent="">
+        <item name="android:background">@drawable/custom_btn_kuis</item>
+    </style>
+
+    <!--Button Video Style-->
+    <style name="btn_video" parent="">
+        <item name="android:background">@drawable/custom_btn_video</item>
+    </style>
+
+    <!--Button Materi Style-->
+    <style name="btn_materi" parent="">
+        <item name="android:background">@drawable/custom_btn_materi</item>
+    </style>
+
+    <!--Drawable Color Style-->
+    <style name="custom_color_drawable" parent="Widget.AppCompat.TextView">
+        <item name="drawableTint">@color/brown_900</item>
+    </style>
+
+    <!--Layout Profile Style-->
+    <style name="layout_video_item">
+        <item name="android:backgroundTint">@color/orange_50</item>
+        <item name="textAllCaps">false</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <!--Layout Card List Style-->
+    <style name="layout_card_list" parent="@style/Widget.MaterialComponents.CardView">
+        <item name="shapeAppearanceOverlay">@style/ShapeAppearanceOverlay.MaterialCardView.Cut</item>
+        <item name="backgroundTint">@color/orange_50</item>
+        <item name="cardBackgroundColor">@color/orange_50</item>
+    </style>
+
+    <!--Layout Card Materi Style-->
+    <style name="layout_card_materi" parent="@style/Widget.MaterialComponents.CardView">
+        <item name="shapeAppearanceOverlay">@style/ShapeAppearanceOverlay.MaterialCardView.Cut</item>
+        <item name="backgroundTint">@color/orange_50</item>
+        <item name="cardBackgroundColor">@color/orange_50</item>
+    </style>
+
+    <style name="ShapeAppearanceOverlay.MaterialCardView.Cut" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSizeTopRight">40dp</item>
+        <item name="cornerSizeTopLeft">40dp</item>
+        <item name="cornerSizeBottomRight">0dp</item>
+        <item name="cornerSizeBottomLeft">0dp</item>
+    </style>
+
+    <style name="layout_card_wayang_list" parent="@style/Widget.MaterialComponents.CardView">
+        <item name="backgroundTint">@color/white</item>
+        <item name="background">@color/white</item>
+        <item name="cardBackgroundColor">@color/white</item>
+    </style>
+
+    <!--Layout Card List Quiz Style-->
+    <style name="layout_card_list_quiz" parent="@style/Widget.MaterialComponents.CardView">
+        <item name="backgroundTint">@color/orange_50</item>
+        <item name="background">@color/orange_50</item>
+        <item name="cardBackgroundColor">@color/orange_50</item>
+    </style>
+
+    <style name="custom_botton_quiz" parent="">
+        <item name="backgroundTint">@color/brown_700</item>
+    </style>
+
+    <style name="custom_progress_linear" parent="Widget.Material3.LinearProgressIndicator">
+        <item name="indicatorColor">@color/brown_700</item>
+        <item name="trackColor">@color/orange_200</item>
+    </style>
+
+    <style name="custom_line" parent="">
+        <item name="android:background">@color/brown_900</item>
+        <item name="android:backgroundTint">@color/brown_900</item>
+    </style>
+
+    <!--Botton Navigation Style-->
+    <style name="nav_style" parent="">
+        <item name="cbn_background">@color/orange_50</item>
+        <item name="cbn_fabColor">@color/orange_50</item>
+        <item name="cbn_iconColor">@color/brown_900</item>
+        <item name="cbn_titleColor">@color/brown_900</item>
+        <item name="cbn_selectedIconColor">@color/brown_900</item>
+    </style>
+
+    <!--Botton Prev Quiz Style-->
+    <style name="btn_prev_style" parent="">
+        <item name="android:backgroundTint">@color/neutral_900</item>
+    </style>
+
+    <!--Botton Next Quiz Style-->
+    <style name="btn_next_style" parent="">
+        <item name="android:backgroundTint">@color/orange_700</item>
+    </style>
+</resources>

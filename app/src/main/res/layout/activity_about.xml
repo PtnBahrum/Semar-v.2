@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    style="@style/layout"
+    tools:context=".features.profile.about.AboutActivity">
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal"
+        android:layout_marginHorizontal="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/btn_backToProfile"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_gravity="start"
+            android:background="@null"
+            android:foreground="?attr/selectableItemBackground"
+            android:importantForAccessibility="no"
+            android:src="@drawable/ic_back_24dp"
+            tools:ignore="UnusedAttribute" />
+
+        <TextView
+            android:id="@+id/tv_title_materi"
+            style="@style/font_h4_semibold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginHorizontal="8dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="@string/about"
+            android:textColor="@color/neutral_50" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="128dp"
+        android:layout_height="128dp"
+        android:layout_marginTop="32dp"
+        android:maxWidth="256dp"
+        android:maxHeight="256dp"
+        android:minWidth="128dp"
+        android:minHeight="128dp"
+        android:src="@drawable/ic_semar_app"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
+
+    <com.google.android.material.card.MaterialCardView
+        style="@style/layout_card_materi"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        app:cardElevation="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginHorizontal="8dp"
+            android:layout_marginTop="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/version"
+                android:textAppearance="@style/font_h6_semibold" />
+            <TextView
+                android:id="@+id/tv_version"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/font_wayang_description"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="8dp"
+                android:text="@string/version_latest"/>
+            <View
+                style="@style/custom_line"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginBottom="8dp"/>
+
+            <!--  Kebijakan Privasi  -->
+            <TextView
+                android:id="@+id/privacy_policy"
+                style="@style/custom_color_drawable"
+                android:textAppearance="@style/font_b1_semibold"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="?attr/selectableItemBackground"
+                android:clickable="true"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="8dp"
+                android:drawablePadding="8dp"
+                android:focusable="true"
+                android:gravity="center_vertical"
+                android:text="@string/privacy_policy"
+                app:drawableRightCompat="@drawable/ic_chevron_right"/>
+
+            <com.google.android.material.divider.MaterialDivider
+                android:id="@+id/divider_privacy_policy"
+                android:visibility="visible"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"/>
+
+            <!--  FAQ  -->
+            <TextView
+                android:id="@+id/faq"
+                style="@style/custom_color_drawable"
+                android:textAppearance="@style/font_b1_semibold"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="?attr/selectableItemBackground"
+                android:clickable="true"
+                android:layout_gravity="center_vertical"
+                android:drawablePadding="8dp"
+                android:focusable="true"
+                android:gravity="center_vertical"
+                android:text="@string/faq"
+                app:drawableRightCompat="@drawable/ic_chevron_right"/>
+
+            <com.google.android.material.divider.MaterialDivider
+                android:id="@+id/divider_faq"
+                android:visibility="visible"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"/>
+
+            <!--  About Application  -->
+            <TextView
+                android:id="@+id/about_app"
+                style="@style/custom_color_drawable"
+                android:textAppearance="@style/font_b1_semibold"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="?attr/selectableItemBackground"
+                android:clickable="true"
+                android:layout_gravity="center_vertical"
+                android:drawablePadding="8dp"
+                android:focusable="true"
+                android:gravity="center_vertical"
+                android:text="@string/about_app_semar"
+                app:drawableRightCompat="@drawable/ic_chevron_right"/>
+
+            <com.google.android.material.divider.MaterialDivider
+                android:id="@+id/divider_about_app"
+                android:visibility="visible"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"/>
+
+            <!--  Support Center  -->
+            <TextView
+                android:id="@+id/support_center"
+                style="@style/custom_color_drawable"
+                android:textAppearance="@style/font_b1_semibold"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="?attr/selectableItemBackground"
+                android:clickable="true"
+                android:layout_gravity="center_vertical"
+                android:drawablePadding="8dp"
+                android:focusable="true"
+                android:gravity="center_vertical"
+                android:text="@string/support_center"
+                app:drawableRightCompat="@drawable/ic_chevron_right"/>
+
+            <com.google.android.material.divider.MaterialDivider
+                android:id="@+id/divider_support_center"
+                android:visibility="visible"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"/>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="52dp">
+
+                <androidx.appcompat.widget.AppCompatImageButton
+                    android:id="@+id/btn_discord"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_gravity="start"
+                    android:layout_margin="16dp"
+                    android:background="@null"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:importantForAccessibility="no"
+                    android:src="@drawable/ic_discord"
+                    tools:ignore="UnusedAttribute" />
+
+                <androidx.appcompat.widget.AppCompatImageButton
+                    android:id="@+id/btn_facebook"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_gravity="start"
+                    android:layout_margin="16dp"
+                    android:background="@null"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:importantForAccessibility="no"
+                    android:src="@drawable/ic_facebook"
+                    tools:ignore="UnusedAttribute" />
+
+                <androidx.appcompat.widget.AppCompatImageButton
+                    android:id="@+id/btn_github"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_gravity="start"
+                    android:layout_margin="16dp"
+                    android:background="@null"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:importantForAccessibility="no"
+                    android:src="@drawable/ic_github"
+                    tools:ignore="UnusedAttribute" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

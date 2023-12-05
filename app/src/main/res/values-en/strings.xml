@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Semar</string>
+    <string name="application_logo">Application Logo</string>
+    <string name="application_name">Application Name</string>
+
+    //Onboarding String
+    <string name="onboarding_slide1_title">Know Various Stories of Wayang Kulit Characters</string>
+    <string name="onboarding_slide2_title">Find Ease of Getting Wayang Kulit Learning Materials</string>
+    <string name="onboarding_slide3_title">Test Your Knowledge About Wayang Kulit With Quiz</string>
+    <string name="onboarding_slide1_desc">Semar helps users to find information about shadow puppet characters from various stories</string>
+    <string name="onboarding_slide2_desc">Semar helps users to find various learning materials about shadow puppets easily and quickly</string>
+    <string name="onboarding_slide3_desc">Semar helps users to test their knowledge about shadow puppets by taking quizzes</string>
+    <string name="ayo_mulai">Let\'s Start</string>
+    <string name="selanjutnya">Next</string>
+    <string name="lewatkan">Skip</string>
+
+    //Login dan Regiter String
+    <string name="login">Log in</string>
+    <string name="string_input_hint_email">Email</string>
+    <string name="string_hint_password">Password</string>
+    <string name="forget_password">Forgot Password?</string>
+    <string name="or">OR</string>
+    <string name="login_with_google">Log in with Google</string>
+    <string name="no_account_question">Don\'t have an account?</string>
+    <string name="register">Register</string>
+    <string name="register_name_page">Register Account</string>
+    <string name="name">Name</string>
+    <string name="string_input_confirmation_password">Confirm Password</string>
+    <string name="string_register">Register</string>
+    <string name="need_account">You already have an account?</string>
+    <string name="to_login">You can log in using the account you created</string>
+    <string name="success_register_message">Account Created Successfully!</string>
+
+    //Home String
+    <string name="profile_photo">Profile Photo</string>
+    <string name="hello_name">Hi, User👋🏻</string>
+
+    //Wayang List String
+    <string name="go_view_string">Let\'s explore the world of Wayang together!</string>
+    <string name="banner_text_judul">History of Wayang Kulit</string>
+    //Item List Wayang String
+    <string name="wayang_character">Wayang Characters</string>
+    <string name="string_intro_list_wayang">Uniquely fascinating characters in Indonesian culture</string>
+    <string name="string_wayang_character_name">Gatot Kaca</string>
+    <string name="string_image_wayang">Pictures of Wayang Characters</string>
+    <string name="wayang_kulit">Wayang Kulit</string>
+    //Wayang Detail String
+    <string name="string_view">Summary</string>
+    <string name="string_name_wayang">Arjuna</string>
+    <string name="name_string">Name</string>
+    <string name="string_behavior">Properties/Characteristics</string>
+    <string name="parent">Father and Mother</string>
+    <string name="brother">Relationship</string>
+    <string name="image_string">Image</string>
+    <string name="description">Description</string>
+
+    //Materi List String
+    <string name="materi">Learn</string>
+    <string name="content_banner_string">Wayang Kulit was first introduced by sunan kalijaga in the 1890s.</string>
+    <string name="learn_material">Learning Material</string>
+    <string name="string_intro_learn_list">Puppet characters in daily life and connecting with art.</string>
+    <string name="string_intro">The traditional art of shadow puppetry was born, lives, grows, develops especially in Javanese society. More than just a performance, wayang kulit used to be a medium of contemplation towards the spiritual spirit of the gods.</string>
+    <string name="string_icon_materi">Material Icon Image</string>
+
+    //Navigation Bar String
+    <string name="home">Home</string>
+    <string name="scan">Scan</string>
+    <string name="profile">Profile</string>
+
+    //Scan String
+    <string name="string_scan_result">Prediction Result :</string>
+    <string name="predict_result">Arjuna</string>
+    <string name="detail_string">Details</string>
+    <string name="progres_scan_string">In Progress</string>
+
+    //Profile String
+    <string name="string_photo_profile">Profile Photo</string>
+    <string name="name_profile">Name</string>
+    <string name="email_profile_string">raixard@foxmail.com</string>
+    <string name="string_setting">Setting</string>
+    <string name="profile_edit_string">Change Profile</string>
+    <string name="string_edit_password">Change Password</string>
+    <string name="dark_mode">Dark Mode</string>
+    <string name="language_string">English</string>
+    <string name="log_out">Logout</string>
+
+    //Error Scan
+    <string name="error_happened">An error occurred</string>
+    <string name="error_choose_photo">Please select a photo</string>
+    <string name="error_permission_denied">Did not get permission</string>
+    <string name="input_choose_from_gallery">Choose from gallery</string>
+    <string name="scan_error_capture_fail">Failed to capture photo</string>
+    <string name="scan_error_bind_camera_fail">Failed to activate camera</string>
+    <string name="scan_error_prediction">Prediction failed</string>
+
+    //Quiz String
+    <string name="quiz">Quiz</string>
+    <string name="string_intro_list_quiz">Test your knowledge of puppet characters in this quiz!</string>
+    <string name="string_item_quiz_header">Quiz 1: Puppet History</string>
+    <string name="start_quiz">Start Quiz</string>
+    <string name="string_icon_quiz">Quiz Icon Image</string>
+    <string name="string_ex_question">The term "wayang" comes from the word "ma Hyang" which means ...</string>
+    <string name="previous_string">Previous</string>
+    <string name="next_string">Next</string>
+    <string name="submit_string">Submit</string>
+    <string name="string_ex_option">Towards the spiritualist of the Almighty</string>
+    <string name="success_quiz">Successfully Complete Quiz</string>
+    <string name="great_quiz">Congratulations on passing!</string>
+    <string name="your_score_string">You earned a score of :</string>
+    <string name="string_ex_score">100</string>
+    <string name="back_string">Back</string>
+    <string name="opsions_string">A</string>
+    <string name="score_string">Score :</string>
+    <string name="_score">100</string>
+    <string name="replay">Start Again</string>
+    <string name="string_you_are_sure">Are you sure?</string>
+    <string name="message_kuis_out">If you press yes, the data will be lost</string>
+    <string name="string_quiz_finish">Are you sure about your answer?</string>
+
+
+    //Video String
+    <string name="string_header_intro_learn">History of Wayang Kulit</string>
+    <string name="string_video_header">Performance video</string>
+    <string name="string_intro_video_list">Explore wayang characters in beautiful performance videos</string>
+    <string name="string_header_video_name">Wise Javanese sayings: Semar on Social Life</string>
+    <string name="translate">Explanation :</string>
+    <string name="string_desc_wayang_video">First, the attitude of life is for everyone to be humble or andhap asor. People should not think of themselves as the greatest and not be arrogant.</string>
+
+    //String Register Error
+    <string name="error_name_null">Please fill in the name first! </string>
+    <string name="error_email_null">Please fill in email first!</string>
+    <string name="error_password_null">Please fill in the password first!</string>
+    <string name="error_konfirmasi_password_null">Please fill in the confirmation password first!</string>
+    <string name="error_email_invalid">Invalid email!</string>
+    <string name="error_password_invalid">Password must be more than 8 characters!</string>
+    <string name="error_konfirmasi_password_invalid">Confirm password is different from password!</string>
+    <string name="register_fail">Registration failed, please try again! </string>
+    <string name="yes">Yes</string>
+    <string name="logout_message">Are you sure you want to log out? </string>
+    <string name="no">No</string>
+    <string name="success">Okay</string>
+    <string name="success_reset_password">Password Reset Request Successful!</string>
+    <string name="reset_message">Please check your email, password reset email has been sent!</string>
+
+    //Profile String Error
+    <string name="oldPasswordEmpty">Please enter your old password first!</string>
+    <string name="newPasswordEmpty">Please enter your new password! </string>
+    <string name="editPasswordSuccess">Password Updated Successfully!</string>
+    <string name="editProfilSuccess">Profile Successfully Updated!</string>
+
+    //Forgot Password String
+    <string name="forgotPasswordMessage">Please check your email, the password reset link has been sent!</string>
+    <string name="botton_close">Close Button</string>
+    <string name="forget_password_name">Forgot Password</string>
+    <string name="string_information_forget_password">Enter registered email to reset password. A password reset link will be sent to your email.</string>
+    <string name="kirim">Send</string>
+
+    //Register Message
+    <string name="registerMessage">Please login with the account you have created!</string>
+
+    //Profile String
+    <string name="edit_profil">Edit Profile</string>
+    <string name="string_profil_picture_desc">Profile Photo</string>
+    <string name="string_btn_edit_image">Edit Photo button</string>
+    <string name="string_field_name">Name Field</string>
+    <string name="field_input_email">Email Input Field</string>
+    <string name="confirmation_string">Enter Password</string>
+    <string name="field_password_konfirmasi">Confirm Password field</string>
+    <string name="save_update">Save</string>
+    <string name="string_edit_password_header">Edit Password</string>
+    <string name="string_old_password">Old Password</string>
+    <string name="string_field_opassword">Input Password field</string>
+    <string name="string_confirm_password">Confirm Password</string>
+    <string name="string_new_password">New Password</string>
+    <string name="field_input_nPassword">New Password Input Field</string>
+    <string name="success_change_profile">Profile Update Successful</string>
+    <string name="success_change_password">Password Update Successful</string>
+
+
+    //Result String
+    <string name="message_full_score">Hooray!!!, you got a perfect score, keep it up! </string>
+    <string name="message_high_score">Excited, you\'ve gotten a pretty high score, improve your study! </string>
+    <string name="message_low_score">Even if your score is still low, don\'t be discouraged to keep studying!!!</string>
+    <string name="message_graduation">Congratulations on graduating!</string>
+    <string name="message_fail">Yah, you haven\'t graduated yet!</string>
+
+    //About String Collection
+    <string name="about_app">About</string>
+    <string name="about">About</string>
+    <string name="version">Version</string>
+    <string name="version_latest">For Student 0.2.1 (05/12/2023 23.11)</string>
+    <string name="privacy_policy">Privacy Policy</string>
+    <string name="about_app_semar">Application About</string>
+    <string name="support_center">Support Center</string>
+
+</resources>
