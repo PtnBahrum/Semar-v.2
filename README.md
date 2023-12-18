@@ -4,3 +4,4 @@ The Semar V.2 application is an application that introduces wayang cultural heri
 
 <img id="gambar_semar" src="https://github.com/PtnBahrum/Semar-v.2/assets/81005654/6094a83e-7352-4650-8be4-175ac5e48a51" alt="Gambar Semar">
 <br>
+<hr>
