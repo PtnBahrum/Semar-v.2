@@ -54,8 +54,6 @@ class UserRepository @Inject constructor(){
         if (firebaseAuth.currentUser != null) {
             try {
                 val snapshot = firebaseDatabase.getReference().child("user").child(firebaseAuth.currentUser!!.uid).get().await()
-//                val snapshot = fireStoreDatabase.collection("User")
-//                    .document(firebaseAuth.currentUser!!.uid).get().await()
                 if (snapshot.exists()) {
                     val user: User? = snapshot.getValue<User>(User::class.java)
                     emit(Resource.Success(data = user!!))

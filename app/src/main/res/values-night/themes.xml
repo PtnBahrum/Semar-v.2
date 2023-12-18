@@ -28,6 +28,11 @@
         <item name="titleTextColor">@color/neutral_50</item>
     </style>
 
+    <!--Custom Splash Layout Style-->
+    <style name="layout_splash">
+        <item name="android:background">@drawable/bg_splash_in</item>
+    </style>
+
     <!--Header Layout Style-->
     <style name="header_home">
         <item name="titleTextColor">@color/neutral_50</item>
@@ -265,6 +270,11 @@
     <!--Gallery Button Style-->
     <style name="image_galery">
         <item name="srcCompat">@drawable/ic_gallery_dark</item>
+    </style>
+
+    <!--Switch Button Style-->
+    <style name="image_switch">
+        <item name="srcCompat">@drawable/ic_switch_camera_dark</item>
     </style>
 
     <!--Capture Button Style-->

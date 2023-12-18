@@ -47,8 +47,13 @@ class EditProfileActivity : AppCompatActivity() {
 
         editProfil()
         binding.btnSave.setOnClickListener {
-           val name = binding.edName.text.toString()
-            viewModel.updateProfil(name,imageUri)
+            val name = binding.edName.text.toString()
+            if(name.length > 20){
+                this@EditProfileActivity.displayToast(getString(R.string.name_much_long))
+
+            }else{
+                viewModel.updateProfil(name,imageUri)
+            }
         }
         binding.btnBackToProfil.setOnClickListener { backToProfil() }
 

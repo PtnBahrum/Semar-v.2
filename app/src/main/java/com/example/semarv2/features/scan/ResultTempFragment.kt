@@ -66,10 +66,14 @@ class ResultTempFragment : Fragment() {
     private fun getPhoto() {
         val picturePath = arguments?.getString("picture") as String
         val myFile = File(picturePath)
-        val isBackCamera = arguments?.getBoolean("isBackCamera") ?: true
+        val isBackCamera = arguments?.getBoolean("isBackCamera", true) as Boolean
         getFile = myFile
         val result = BitmapFactory.decodeFile(myFile.path)
         rotateBitmap(result, isBackCamera)
+//        val result = rotateBitmap(
+//            BitmapFactory.decodeFile(myFile.path),
+//            isBackCamera
+//        )
         binding.ivScannedPhoto.setImageBitmap(result)
     }
 

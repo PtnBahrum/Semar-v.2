@@ -1,18 +1,23 @@
 package com.example.semarv2.data.source.remote.repository
 
+import android.content.Context
 import android.content.Intent
 import androidx.lifecycle.MutableLiveData
+import com.example.semarv2.R
 import com.example.semarv2.data.source.remote.model.User
 import com.example.semarv2.util.Resource
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInClient
 import com.google.android.gms.common.api.ApiException
+import com.google.android.gms.tasks.Tasks
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.auth.GoogleAuthProvider
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.crashlytics.buildtools.reloc.org.apache.http.HttpException
 import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.database.ktx.childEvents
+import com.google.firebase.database.snapshots
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.tasks.await
@@ -40,6 +45,7 @@ class AuthRepository @Inject constructor(){
             val result = firebaseAuth.createUserWithEmailAndPassword(email, password).await()
             val userId = firebaseAuth.currentUser!!.uid
             user.id = userId
+
             firebaseDatabase.reference.child("user").child(userId).setValue(user).await()
             firebaseDatabase.reference.child("quiz").child("quiz_1").child("score")
                 .child(userId).setValue(0).await()
@@ -53,6 +59,7 @@ class AuthRepository @Inject constructor(){
             emit((result.user?.let {
                 Resource.Success(data = it)
             }!!))
+
             loggedOutLiveData.postValue(true)
         } catch (e: HttpException) {
             emit(Resource.Error(message = e.localizedMessage ?: "Unknown Error"))
@@ -84,14 +91,20 @@ class AuthRepository @Inject constructor(){
 
     }
 
-    fun forgotPassword(email : String): Flow<Resource<Unit>> = flow{
+    fun forgotPassword(email : String, context: Context): Flow<Resource<Unit>> = flow{
         emit(Resource.Loading())
 
         try {
-            val result = firebaseAuth.sendPasswordResetEmail(email).await()
-            // Berhasil mengirim email reset password
-            emit(Resource.Success(data = Unit))
-            loggedOutLiveData.postValue(true)
+            // Buat query untuk mencari user dengan email yang sesuai
+            val snapQuery = firebaseDatabase.reference.child("user").orderByChild("email").equalTo(email).get().await()
+
+            if (snapQuery.exists()) {
+                firebaseAuth.sendPasswordResetEmail(email).await()
+                emit(Resource.Success(data = Unit))
+                loggedOutLiveData.postValue(true)
+            } else {
+                emit(Resource.Error(message = context.resources.getString(R.string.email_invalid_error)))
+            }
         }catch (e: HttpException) {
             emit(Resource.Error(message = e.localizedMessage ?: "Unknown Error"))
         } catch (e: IOException) {
@@ -143,30 +156,6 @@ class AuthRepository @Inject constructor(){
             }
         }
     }
-
-//    // Metode login menggunakan akun Google
-//    fun loginWithGoogle(data: Intent): Flow<Resource<FirebaseUser>> = flow {
-//        emit(Resource.Loading())
-//
-//        try {
-//            val account = GoogleSignIn.getSignedInAccountFromIntent(data).getResult(ApiException::class.java)
-//            val credential = GoogleAuthProvider.getCredential(account?.idToken, null)
-//            val result = firebaseAuth.signInWithCredential(credential).await()
-//            emit((result.user?.let {
-//                Resource.Success(data = it)
-//            }!!))
-//            loggedOutLiveData.postValue(false)
-//
-//        } catch (e: ApiException) {
-//            emit(Resource.Error(message = e.localizedMessage ?: "Google Sign-In failed"))
-//        } catch (e: HttpException) {
-//            emit(Resource.Error(message = e.localizedMessage ?: "Unknown Error"))
-//        } catch (e: IOException) {
-//            emit(Resource.Error(message = e.localizedMessage ?: "Check Your Internet Connection"))
-//        } catch (e: Exception) {
-//            emit(Resource.Error(message = e.localizedMessage ?: ""))
-//        }
-//    }
 
     fun signInWithGoogleAndAddUser(data: Intent, user: User): Flow<Resource<FirebaseUser>> = flow {
         emit(Resource.Loading())

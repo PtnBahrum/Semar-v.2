@@ -142,6 +142,8 @@
     <string name="success">Oke</string>
     <string name="success_reset_password">Permintaan Reset Password Berhasil!</string>
     <string name="reset_message">Silahkan cek email anda, email reset password telah dikirim!</string>
+    <string name="name_much_long">Nama Anda Terlalu Panjang</string>
+    <string name="null_data">Silahkan isi data yang kosong terlebih dahulu!</string>
 
     //Profile String Error
     <string name="oldPasswordEmpty">Silahkan masukkan password lama terlebih dahulu!</string>
@@ -155,6 +157,7 @@
     <string name="forget_password_name">Lupa Password</string>
     <string name="string_information_forget_password">Masukkan email terdaftar untuk melakukan lupa password. Tautan reset password akan dikirimkan ke email anda.</string>
     <string name="kirim">Kirim</string>
+    <string name="email_invalid_error">Email belum terdaftar!</string>
 
     //Register Message
     <string name="registerMessage">Silahkan melakukan login dengan akun yang telah anda buat!</string>

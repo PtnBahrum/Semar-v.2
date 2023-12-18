@@ -31,7 +31,7 @@ class ScanFragment : Fragment() {
     private lateinit var binding: FragmentScanBinding
     private lateinit var cameraProvider: ProcessCameraProvider
     private var imageCapture: ImageCapture? = null
-    private var cameraSelector: CameraSelector = CameraSelector.DEFAULT_BACK_CAMERA
+    private var cameraSelector: CameraSelector = CameraSelector.DEFAULT_BACK_CAMERA // Changed to default front camera
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -41,9 +41,15 @@ class ScanFragment : Fragment() {
         binding = FragmentScanBinding.inflate(inflater, container, false)
         return binding.root
     }
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+//        binding.btnSwitch.setOnClickListener {
+//            cameraSelector = if (cameraSelector == CameraSelector.DEFAULT_FRONT_CAMERA) CameraSelector.DEFAULT_BACK_CAMERA
+//            else CameraSelector.DEFAULT_FRONT_CAMERA
+//            startCamera()
+//        }
         binding.btnCaptureImage.setOnClickListener {
             takePhoto()
         }
@@ -54,7 +60,6 @@ class ScanFragment : Fragment() {
         if (!allPermissionsGranted()) {
             requestPermissionLauncher.launch(REQUIRED_PERMISSIONS)
         }
-
         startCamera()
     }
 

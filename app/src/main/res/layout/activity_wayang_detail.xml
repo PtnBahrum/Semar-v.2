@@ -13,6 +13,20 @@
         app:layoutDescription="@xml/activity_wayang_detail_scene"
         tools:context=".features.wayang.detail.WayangDetailActivity">
 
+        <View
+            android:id="@+id/horizontal_line1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.13"/>
+
+        <View
+            android:id="@+id/horizontal_line2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.89" />
+
         <androidx.appcompat.widget.AppCompatImageButton
             android:id="@+id/btn_backToList"
             android:layout_width="36dp"
@@ -34,7 +48,7 @@
             style="@style/btn_ok"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="-35dp"
+            android:layout_marginBottom="-25dp"
             android:text="@string/string_view"
             android:textAppearance="@style/font_h5_regular"
             android:elevation="8dp"
@@ -53,34 +67,34 @@
             android:id="@+id/materialCardView"
             style="@style/layout_card_list"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginTop="120dp"
+            android:layout_height="wrap_content"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+            app:layout_constraintTop_toBottomOf= "@id/horizontal_line2">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="vertical"
                 android:layout_marginHorizontal="16dp"
-                android:layout_marginTop="32dp">
+                android:layout_marginTop="32dp"
+                android:orientation="vertical">
 
                 <TextView
                     android:id="@+id/tv_name_wayang"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="center"
                     android:text="@string/string_name_wayang"
-                    android:textAppearance="@style/font_h5_semibold"
                     android:textAllCaps="true"
-                    android:layout_gravity="center"/>
+                    android:textAppearance="@style/font_h5_semibold" />
 
                 <ScrollView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginTop="16dp"
-                    android:layout_marginBottom="16dp">
+                    android:layout_marginBottom="108dp"
+                    android:scrollbars="none">
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -92,64 +106,73 @@
                             android:layout_height="wrap_content"
                             android:text="@string/name_string"
                             android:textAppearance="@style/font_b1_semibold" />
+
                         <TextView
                             android:id="@+id/tv_name_wayang_2"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:textAppearance="@style/font_wayang_description"
                             android:layout_marginTop="4dp"
-                            android:layout_marginBottom="8dp"/>
+                            android:layout_marginBottom="8dp"
+                            android:textAppearance="@style/font_wayang_description" />
+
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
                             android:text="@string/string_behavior"
-                            android:textAppearance="@style/font_b1_semibold"
-                            android:layout_marginTop="8dp"/>
+                            android:textAppearance="@style/font_b1_semibold" />
+
                         <TextView
                             android:id="@+id/tv_sifat_wayang"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:textAppearance="@style/font_wayang_description"
                             android:layout_marginTop="4dp"
-                            android:layout_marginBottom="8dp"/>
+                            android:layout_marginBottom="8dp"
+                            android:textAppearance="@style/font_wayang_description" />
+
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
                             android:text="@string/parent"
-                            android:textAppearance="@style/font_b1_semibold"
-                            android:layout_marginTop="8dp"/>
+                            android:textAppearance="@style/font_b1_semibold" />
+
                         <TextView
                             android:id="@+id/tv_parent_wayang"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:textAppearance="@style/font_wayang_description"
                             android:layout_marginTop="4dp"
-                            android:layout_marginBottom="8dp"/>
+                            android:layout_marginBottom="8dp"
+                            android:textAppearance="@style/font_wayang_description" />
+
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
                             android:text="@string/brother"
-                            android:textAppearance="@style/font_b1_semibold"
-                            android:layout_marginTop="8dp"/>
+                            android:textAppearance="@style/font_b1_semibold" />
+
                         <TextView
                             android:id="@+id/tv_brosis_wayang"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:textAppearance="@style/font_wayang_description"
                             android:layout_marginTop="4dp"
-                            android:layout_marginBottom="8dp"/>
+                            android:layout_marginBottom="8dp"
+                            android:textAppearance="@style/font_wayang_description" />
+
                         <View
                             style="@style/custom_line"
                             android:layout_width="match_parent"
                             android:layout_height="1dp"
                             android:layout_marginTop="3dp"
                             android:layout_marginBottom="8dp" />
+
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
                             android:text="@string/image_string"
-                            android:textAppearance="@style/font_b1_semibold"
-                            android:layout_marginTop="8dp"/>
+                            android:textAppearance="@style/font_b1_semibold" />
 
                         <!--  Image List  -->
                         <FrameLayout
@@ -160,7 +183,7 @@
                                 android:id="@+id/vp_wayang_images"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
-                                android:transitionName="wayangImage"/>
+                                android:transitionName="wayangImage" />
 
                             <me.relex.circleindicator.CircleIndicator3
                                 android:id="@+id/indicator_wayang_images"
@@ -173,20 +196,22 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
                             android:text="@string/description"
-                            android:textAppearance="@style/font_b1_semibold"
-                            android:layout_marginTop="8dp"/>
+                            android:textAppearance="@style/font_b1_semibold" />
+
                         <TextView
                             android:id="@+id/tv_desc_wayang"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:textAppearance="@style/font_wayang_description"
                             android:layout_marginTop="4dp"
-                            android:layout_marginBottom="8dp"/>
+                            android:layout_marginBottom="8dp"
+                            android:textAppearance="@style/font_wayang_description" />
                     </LinearLayout>
                 </ScrollView>
             </LinearLayout>
         </com.google.android.material.card.MaterialCardView>
+
     </androidx.constraintlayout.motion.widget.MotionLayout>
 
     <ProgressBar

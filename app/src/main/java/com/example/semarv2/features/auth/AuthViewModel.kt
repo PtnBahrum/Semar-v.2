@@ -1,5 +1,6 @@
 package com.example.semarv2.features.auth
 
+import android.content.Context
 import android.content.Intent
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
@@ -62,8 +63,8 @@ class AuthViewModel  @Inject constructor(
         }.launchIn(viewModelScope)
     }
 
-    fun resetPassword(email: String) {
-        authRepository.forgotPassword(email).onEach {
+    fun resetPassword(email: String, context : Context) {
+        authRepository.forgotPassword(email, context).onEach {
             when(it){
                 is Resource.Loading -> {
                     _resetPasswordResult.value = ForgotPasswordState(isLoading = true)
@@ -125,22 +126,5 @@ class AuthViewModel  @Inject constructor(
             }
         }.launchIn(viewModelScope)
     }
-
-//    fun loginWithGoogle(data : Intent){
-//        authRepository.loginWithGoogle(data).onEach {
-//            when (it) {
-//                is Resource.Success -> {
-//                    _user.value = AuthState(data = it.data)
-//                }
-//                is Resource.Error -> {
-//                    _user.value = AuthState(error = it.message ?: "")
-//                }
-//                is Resource.Loading -> {
-//                    _user.value = AuthState(isLoading = true)
-//                }
-//            }
-//        }
-//    }
-
 
 }

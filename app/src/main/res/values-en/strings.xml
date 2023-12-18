@@ -142,6 +142,8 @@
     <string name="success">Okay</string>
     <string name="success_reset_password">Password Reset Request Successful!</string>
     <string name="reset_message">Please check your email, password reset email has been sent!</string>
+    <string name="name_much_long">Your Name Very Long</string>
+    <string name="null_data">Please fill in the blank data first! </string>
 
     //Profile String Error
     <string name="oldPasswordEmpty">Please enter your old password first!</string>
@@ -155,6 +157,7 @@
     <string name="forget_password_name">Forgot Password</string>
     <string name="string_information_forget_password">Enter registered email to reset password. A password reset link will be sent to your email.</string>
     <string name="kirim">Send</string>
+    <string name="email_invalid_error">Email not registered yet!</string>
 
     //Register Message
     <string name="registerMessage">Please login with the account you have created!</string>

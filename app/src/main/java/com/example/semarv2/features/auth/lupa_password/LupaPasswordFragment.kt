@@ -103,7 +103,7 @@ class LupaPasswordFragment : DialogFragment() {
         }else if(!Patterns.EMAIL_ADDRESS.matcher(email).matches()){
             showToast(getString(R.string.error_email_invalid))
         }else{
-            viewModel.resetPassword(email)
+            viewModel.resetPassword(email, requireContext())
         }
     }
 

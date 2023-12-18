@@ -104,17 +104,19 @@ class RegisterActivity : AppCompatActivity() {
         )
 
         if (name.isEmpty()){
-            this@RegisterActivity.displayToast(getString(R.string.error_name_null))
-        }else if (email.isEmpty()){
-            this@RegisterActivity.displayToast(getString(R.string.error_email_null))
+            this@RegisterActivity.displayToast(getString(R.string.null_data))
+        }else if(name.length > 20){
+            this@RegisterActivity.displayToast(getString(R.string.name_much_long))
+        } else if (email.isEmpty()){
+            this@RegisterActivity.displayToast(getString(R.string.null_data))
         }else if(!Patterns.EMAIL_ADDRESS.matcher(email).matches()){
             this@RegisterActivity.displayToast(getString(R.string.error_email_invalid))
         }else if (password.isEmpty()){
-            this@RegisterActivity.displayToast(getString(R.string.error_password_null))
+            this@RegisterActivity.displayToast(getString(R.string.null_data))
         }else if (password.length < 8){
             this@RegisterActivity.displayToast(getString(R.string.error_password_invalid))
         }else if (confpassword.isEmpty()){
-            this@RegisterActivity.displayToast(getString(R.string.error_konfirmasi_password_null))
+            this@RegisterActivity.displayToast(getString(R.string.null_data))
         }else if(confpassword != password){
             this@RegisterActivity.displayToast(getString(R.string.error_konfirmasi_password_invalid))
         }else{

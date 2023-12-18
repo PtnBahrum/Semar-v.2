@@ -70,16 +70,18 @@
                 android:textAllCaps="true"
                 android:text="@string/wayang_kulit" />
 
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/rv_wayang"
-                android:layout_width="wrap_content"
+            <GridView
+                android:id="@+id/gv_wayang"
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
                 android:layout_marginHorizontal="12dp"
                 android:layout_marginTop="16dp"
-                android:paddingVertical="8dp"
-                app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
-                app:spanCount="3"
+                android:columnWidth="120dp"
+                android:numColumns="3"
+                android:verticalSpacing="8dp"
+                android:horizontalSpacing="8dp"
+                android:scrollbars="none"
                 tools:listitem="@layout/item_wayang" />
         </LinearLayout>
 

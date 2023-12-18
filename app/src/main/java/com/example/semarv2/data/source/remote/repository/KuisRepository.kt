@@ -110,84 +110,6 @@ class KuisRepository @Inject constructor(
             emitSource(localData)
         }
     }
-//    fun getListKuis() = liveData {
-//        emit(Result.Loading)
-//
-//        if (firebaseAuth.currentUser != null) {
-//            try {
-//                // Retrieve the current user ID
-//                val currentUser = firebaseAuth.currentUser!!.uid
-//                Log.d(ContentValues.TAG, "Fetching quiz data for user: $currentUser")
-//
-//                // Fetch quiz data from Firebase Realtime Database
-//                val querySnapshot = databaseFirebase.getReference("quiz").get().await()
-//                Log.d(ContentValues.TAG, "Retrieved quiz data: $querySnapshot")
-//
-//                // Initialize an empty list for quiz entities
-//                val kuisList = mutableListOf<KuisEntity>()
-//
-//                // Process each quiz document from the query snapshot
-//                for (document in querySnapshot.children) {
-//                    val quizData: Map<String, Any>? = document.value as? Map<String, Any>
-//                    Log.d(ContentValues.TAG, "Processing quiz document: $document")
-//
-//                    // Extract quiz information from the document
-//                    val kuis = KuisEntity(
-//                        id = quizData!!["id"] as Long,
-//                        title = quizData["title"] as String,
-//                        image = quizData["image"] as String,
-//                        score = 0,
-//                        list_soal = emptyList()
-//                    )
-//                    Log.d(ContentValues.TAG, "Extracted quiz information: $kuis")
-//
-//                    // Retrieve and store score for the current user
-//                    if (quizData.containsKey("score")) {
-//                        val scoreMap = quizData["score"] as Map<String, Long>
-//                        Log.d(ContentValues.TAG, "Retrieving score data: $scoreMap")
-//
-//                        if (scoreMap.containsKey(currentUser)) {
-//                            kuis.score = scoreMap[currentUser]!!.toLong()
-//                            Log.d(ContentValues.TAG, "Storing score for user $currentUser: ${kuis.score}")
-//                        }
-//                    }
-//
-//                    // Add the quiz entity to the list
-//                    kuisList.add(kuis)
-//                }
-//
-//                // Emit the list of quiz entities with success status
-//                emit(Result.Success(kuisList))
-//
-//                // Clear local quiz data
-//                database.kuisDao().deleteAllKuis()
-//                Log.d(ContentValues.TAG, "Cleared local quiz data")
-//
-//                // Save data to Room Database
-//                database.kuisDao().insertkuis(kuisList)
-//                Log.d(ContentValues.TAG, "Saved quiz data to local database: $kuisList")
-//            } catch (e: HttpException) {
-//                emit(Result.Error(e.localizedMessage.toString() ?: "Unknown Error"))
-//                Log.d(ContentValues.TAG, "Error fetching quiz data: ${e.localizedMessage}")
-//            } catch (e: IOException) {
-//                emit(
-//                    Result.Error(
-//                        e.localizedMessage.toString() ?: "Check Your Internet Connection"
-//                    )
-//                )
-//                Log.d(ContentValues.TAG, "Network error: ${e.localizedMessage}")
-//            } catch (e: Exception) {
-//                emit(Result.Error(e.localizedMessage.toString() ?: "Unexpected error"))
-//                Log.d(ContentValues.TAG, "Unexpected error: ${e.localizedMessage}")
-//            }
-//
-//            // Emit the local quiz data stream
-//            val localData: LiveData<Result<List<KuisEntity>>> =
-//                database.kuisDao().getListKuis().map { Result.Success(it) }
-//            emitSource(localData)
-//        }
-//    }
-
     fun getKuisById(id : Long) = liveData {
         emit(Result.Loading)
         if(firebaseAuth.currentUser != null){
@@ -217,37 +139,6 @@ class KuisRepository @Inject constructor(
             emitSource(localData)
         }
     }
-
-//    fun updateScore(score : Int, id : Int) = liveData {
-//        emit(Result.Loading)
-//        if(firebaseAuth.currentUser != null){
-//            try {
-//                val snapQuery = databaseFirebase.getReference("user").child(firebaseAuth.currentUser!!.uid)
-//                snapQuery.child("score_quiz_${id}").setValue(score).await()
-//
-//                val queryDataQuiz = databaseFirebase.getReference("quiz").child("quiz_${id}").child("score")
-//                queryDataQuiz.child(firebaseAuth.currentUser!!.uid).setValue(score).await()
-//
-//            } catch (e : HttpException){
-//                emit(Result.Error(e.localizedMessage.toString() ?: "Unknown Error"))
-//                Log.d(ContentValues.TAG,e.localizedMessage)
-//            } catch (e: IOException) {
-//                emit(
-//                    Result.Error(
-//                        e.localizedMessage.toString() ?: "Check Your Internet Connection"
-//                    )
-//                )
-//                Log.d(ContentValues.TAG,e.localizedMessage)
-//            } catch (e: Exception) {
-//                emit(Result.Error(e.localizedMessage.toString() ?: ""))
-//                Log.d(ContentValues.TAG,e.localizedMessage)
-//            }
-//
-//            val localData : LiveData<Result<List<KuisEntity>>> =
-//                database.kuisDao().getListKuis().map { Result.Success(it) }
-//            emitSource(localData)
-//        }
-//    }
 
     fun updateQuizScore(score : Long, id : Long): Flow<Resource<Unit>> = flow {
         emit(Resource.Loading())

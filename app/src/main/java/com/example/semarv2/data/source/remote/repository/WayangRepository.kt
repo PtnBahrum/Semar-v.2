@@ -28,47 +28,6 @@ class WayangRepository @Inject constructor(
     private val apiService: ApiService
 ){
 
-//    fun getListWayang() = flow {
-//        emit(Resource.Loading())
-//        if (firebaseAuth.currentUser != null) {
-//            try {
-//                // Ambil data dari Firestore
-//                val querySnapshot = fireStoreDatabase.collection("wayang_detail").get().await()
-//
-//                // Mapping data Firestore ke model Wayang
-//                val wayangList = mutableListOf<WayangEntity>()
-//                for (document in querySnapshot.documents) {
-//                    val wayang: WayangEntity? = document.toObject(WayangEntity::class.java)
-//                    wayang?.let { wayangList.add(it) }
-//                }
-//
-//                // Simpan data ke Room Database
-//                withContext(Dispatchers.IO) {
-//                    database.wayangDao().insertWayangs(wayangList)
-//                }
-//
-//                // Ambil data dari Room Database
-//                val localData = withContext(Dispatchers.IO) {
-//                    database.wayangDao().getListWayang()
-//                }
-//
-//                // Emit data ke flow
-//                emit(Resource.Success(data = localData))
-//
-//            } catch (e: HttpException) {
-//                emit(Resource.Error(message = e.localizedMessage ?: "Unknown Error"))
-//            } catch (e: IOException) {
-//                emit(
-//                    Resource.Error(
-//                        message = e.localizedMessage ?: "Check Your Internet Connection"
-//                    )
-//                )
-//            } catch (e: Exception) {
-//                emit(Resource.Error(message = e.localizedMessage ?: ""))
-//            }
-//        }
-//    }
-
     fun getListWayang() = liveData {
         emit(Result.Loading)
         if(firebaseAuth.currentUser != null){
@@ -106,44 +65,6 @@ class WayangRepository @Inject constructor(
             emitSource(localData)
         }
     }
-
-//    fun getWayangById(id : String) = flow {
-//        emit(Resource.Loading())
-//        if(firebaseAuth.currentUser != null){
-//            try {
-//                val snapshot = fireStoreDatabase.collection("wayang_detail").document(id).get().await()
-//                if(snapshot.exists()){
-//                    val wayang : WayangEntity? = snapshot.toObject(WayangEntity::class.java)
-//
-//                    // Simpan data ke Room Database
-//                    withContext(Dispatchers.IO){
-//                        database.wayangDao().insertWayangs(listOf(wayang) as List<WayangEntity>)
-//                    }
-//
-//                    // Ambil data dari Room Database
-//                    val localData = withContext(Dispatchers.IO){
-//                        database.wayangDao().getWayangById(id)
-//                    }
-//
-//                    // Emit data ke flow
-//                    emit(Resource.Success(data = localData))
-//                }
-//            }catch (e : HttpException){
-//                emit(Resource.Error(message = e.localizedMessage ?: "Unknown Error"))
-//                Log.d(TAG,e.localizedMessage)
-//            } catch (e: IOException) {
-//                emit(
-//                    Resource.Error(
-//                        message = e.localizedMessage ?: "Check Your Internet Connection"
-//                    )
-//                )
-//                Log.d(TAG,e.localizedMessage)
-//            } catch (e: Exception) {
-//                emit(Resource.Error(message = e.localizedMessage ?: ""))
-//                Log.d(TAG,e.localizedMessage)
-//            }
-//        }
-//    }
     fun getWayangById(id : String) = liveData {
         emit(Result.Loading)
         if( firebaseAuth.currentUser != null){

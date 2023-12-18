@@ -24,49 +24,6 @@ class VideoRepository @Inject constructor(
     private val fireStoreDatabase: FirebaseFirestore,
     private val firebaseAuth: FirebaseAuth
 ) {
-//    fun getListVideo() = flow {
-//        emit(Resource.Loading())
-//        if (firebaseAuth.currentUser != null) {
-//            try {
-//                // Ambil data dari Firestore
-//                val querySnapshot = fireStoreDatabase.collection("wayang_video").get().await()
-//
-//                // Mapping data Firestore ke model Wayang
-//                val videoList = mutableListOf<VideoEntity>()
-//                for (document in querySnapshot.documents) {
-//                    val video: VideoEntity? = document.toObject(VideoEntity::class.java)
-//                    video?.let { videoList.add(it) }
-//                }
-//
-//                // Simpan data ke Room Database
-//                withContext(Dispatchers.IO) {
-//                    database.videoDao().insertVideos(videoList)
-//                }
-//
-//                // Ambil data dari Room Database
-//                val localData = withContext(Dispatchers.IO) {
-//                    database.videoDao().getListVideo()
-//                }
-//
-//                // Emit data ke flow
-//                emit(Resource.Success(data = localData))
-//
-//            } catch (e: HttpException) {
-//                emit(Resource.Error(message = e.localizedMessage ?: "Unknown Error"))
-//                Log.d(TAG,e.localizedMessage)
-//            } catch (e: IOException) {
-//                emit(
-//                    Resource.Error(
-//                        message = e.localizedMessage ?: "Check Your Internet Connection"
-//                    )
-//                )
-//                Log.d(TAG,e.localizedMessage)
-//            } catch (e: Exception) {
-//                emit(Resource.Error(message = e.localizedMessage ?: ""))
-//                Log.d(TAG,e.localizedMessage)
-//            }
-//        }
-//    }
 
     fun getListVideo() = liveData {
         emit(Result.Loading)
@@ -103,43 +60,6 @@ class VideoRepository @Inject constructor(
             emitSource(localData)
         }
     }
-
-//    fun getVideoById(id : String) = flow {
-//        emit(Resource.Loading())
-//        if (firebaseAuth.currentUser != null){
-//            try {
-//                val snapshot = fireStoreDatabase.collection("wayang_video").document(id).get().await()
-//                if(snapshot.exists()){
-//                    val video: VideoEntity? = snapshot.toObject(VideoEntity::class.java)
-//
-//                    // Simpan data ke Room Database
-//                    withContext(Dispatchers.IO) {
-//                        database.videoDao().insertVideos(listOf(video) as List<VideoEntity>)
-//                    }
-//
-//                    // Ambil data dari Room Database
-//                    val localData = withContext(Dispatchers.IO) {
-//                        database.videoDao().getVideoById(id)
-//                    }
-//                    // Emit data ke flow
-//                    emit(Resource.Success(data = localData))
-//                }
-//            }catch (e : HttpException){
-//                emit(Resource.Error(message = e.localizedMessage ?: "Unknown Error"))
-//                Log.d(TAG,e.localizedMessage)
-//            } catch (e: IOException) {
-//                emit(
-//                    Resource.Error(
-//                        message = e.localizedMessage ?: "Check Your Internet Connection"
-//                    )
-//                )
-//                Log.d(TAG,e.localizedMessage)
-//            } catch (e: Exception) {
-//                emit(Resource.Error(message = e.localizedMessage ?: ""))
-//                Log.d(TAG,e.localizedMessage)
-//            }
-//        }
-//    }
 
     fun getVideoById(id : String) = liveData {
         emit(Result.Loading)

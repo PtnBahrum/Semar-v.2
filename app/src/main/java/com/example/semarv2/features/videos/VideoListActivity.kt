@@ -60,28 +60,13 @@ class VideoListActivity : AppCompatActivity() {
             }
         }
     }
-
-//    private fun observeWayangData() {
-//        lifecycle.coroutineScope.launchWhenCreated {
-//            viewModel.videoListData.collect { state ->
-//                when {
-//                    state.isLoading -> {
-//                        binding.pbVideo.visibility = View.VISIBLE
-//                    }
-//                    state.error.isNotBlank() -> {
-//                        binding.pbVideo.visibility = View.GONE
-//                        displayToast(state.error)
-//                    }
-//                    state.data != null -> {
-//                        binding.pbVideo.visibility = View.GONE
-//                        videoAdapter.updateData(state.data)
-//                    }
-//                }
-//            }
-//        }
-//    }
+    override fun onResume() {
+        super.onResume()
+        showListVideo()
+    }
     companion object {
         const val TAG = "VideoList"
     }
+
 
 }

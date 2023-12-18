@@ -23,9 +23,14 @@
 
     <!--Custom Detail Wayang Layout Style-->
     <style name="layout_detail">
-        <item name="android:background">@drawable/bg_wayang_2</item>
+        <item name="android:background">@drawable/bg_detail</item>
         <item name="android:scaleType">centerCrop</item>
         <item name="titleTextColor">@color/neutral_50</item>
+    </style>
+
+    <!--Custom Splash Layout Style-->
+    <style name="layout_splash">
+        <item name="android:background">@drawable/bg_splash_in</item>
     </style>
 
     <!--Header Layout Style-->
@@ -265,6 +270,11 @@
     <!--Gallery Button Style-->
     <style name="image_galery">
         <item name="srcCompat">@drawable/ic_gallery</item>
+    </style>
+
+    <!--Switch Button Style-->
+    <style name="image_switch">
+        <item name="srcCompat">@drawable/ic_switch_camera</item>
     </style>
 
     <!--Capture Button Style-->

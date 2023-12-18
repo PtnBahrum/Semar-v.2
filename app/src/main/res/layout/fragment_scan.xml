@@ -37,6 +37,17 @@
             app:layout_constraintTop_toTopOf="parent"
             style="@style/image_galery"
             android:importantForAccessibility="no" />
+
+<!--        <ImageView-->
+<!--            android:id="@+id/btn_switch"-->
+<!--            android:layout_width="40dp"-->
+<!--            android:layout_height="40dp"-->
+<!--            android:layout_marginTop="16dp"-->
+<!--            android:layout_marginStart="16dp"-->
+<!--            app:layout_constraintStart_toStartOf="@+id/viewFinder"-->
+<!--            app:layout_constraintTop_toTopOf="parent"-->
+<!--            style="@style/image_switch"-->
+<!--            android:importantForAccessibility="no" />-->
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </FrameLayout>

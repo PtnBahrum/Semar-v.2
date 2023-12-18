@@ -55,4 +55,9 @@ class MateriListActivity : AppCompatActivity() {
             }
         }
     }
+
+    override fun onResume() {
+        super.onResume()
+        showListMateri()
+    }
 }
