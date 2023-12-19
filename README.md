@@ -37,3 +37,7 @@ This Semar application has several features, including:
 <hr>
 
 ### Apk Download
+
+[![Actions Status][gh-actions-badge]]
+
+[gh-actions-badge]: https://drive.google.com/file/d/1HcAyQA7PtG_8yN-trAby69F7Gz3dYvrK/view?usp=sharing
