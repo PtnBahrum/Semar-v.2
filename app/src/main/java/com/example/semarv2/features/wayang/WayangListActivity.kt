@@ -49,10 +49,10 @@ class WayangListActivity : AppCompatActivity() {
         }
     }
 
-    override fun onResume() {
-        super.onResume()
-        showListWayang()
-    }
+//    override fun onResume() {
+//        super.onResume()
+//        showListWayang()
+//    }
     companion object {
         private const val TAG = "WayangList"
     }

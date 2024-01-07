@@ -151,6 +151,7 @@ class QuestionActivity : AppCompatActivity() {
                 is Result.Success -> {
                     val quizData = result.data
                     showQuizContent(quizData.list_soal)
+                    binding.tvQuiz!!.text = quizData.title
                     binding.pbQuiz.visibility = View.GONE
 
                 }

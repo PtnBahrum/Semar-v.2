@@ -8,24 +8,29 @@
     tools:context=".features.profile.ProfileFragment">
 
     <ScrollView
+        style="@style/layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        style="@style/layout">
+        tools:layout_editor_absoluteX="120dp"
+        tools:layout_editor_absoluteY="256dp">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_marginTop="16dp">
+            android:layout_marginTop="16dp"
+            android:orientation="vertical">
             <!--  Profile Detail  -->
             <FrameLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp">
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:gravity="center_horizontal"
                     android:orientation="vertical">
+
                     <Space
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
@@ -59,10 +64,10 @@
 
                     <androidx.cardview.widget.CardView
                         android:id="@+id/btn_user_image"
-                        android:layout_width="100dp"
-                        android:layout_height="100dp"
-                        android:layout_marginBottom="16dp"
-                        app:cardCornerRadius="50dp"
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:layout_marginBottom="8dp"
+                        app:cardCornerRadius="100dp"
                         app:cardElevation="@dimen/cardview_default_elevation">
 
                         <ImageView
@@ -78,16 +83,16 @@
 
                     <TextView
                         android:id="@+id/tv_name"
-                        style="@style/font_h5_semibold"
+                        style="@style/font_h3_semibold"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:ellipsize="end"
                         android:maxLines="1"
-                        android:text="@string/name"/>
+                        android:text="@string/name" />
 
                     <TextView
                         android:id="@+id/tv_email"
-                        style="@style/font_b1_regular"
+                        style="@style/font_h4_regular"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/email_profile_string" />
@@ -101,7 +106,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:layout_marginEnd="16dp"
-                android:layout_marginBottom="24dp"
+                android:layout_marginBottom="32dp"
                 app:cardCornerRadius="8dp"
                 app:cardElevation="8dp">
 
@@ -111,61 +116,61 @@
                     android:orientation="vertical">
 
                     <TextView
-                        style="@style/font_h5_semibold"
+                        style="@style/font_h3_semibold"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="16dp"
                         android:layout_marginTop="16dp"
                         android:layout_marginEnd="16dp"
                         android:layout_marginBottom="8dp"
-                        android:text="@string/string_setting"/>
+                        android:text="@string/string_setting" />
 
                     <!--  Edit Profile  -->
                     <TextView
                         android:id="@+id/setting_edit_profile"
                         style="@style/custom_color_drawable"
-                        android:textAppearance="@style/font_b1_regular"
                         android:layout_width="match_parent"
-                        android:layout_height="48dp"
-                        android:background="?attr/selectableItemBackground"
-                        android:clickable="true"
+                        android:layout_height="72dp"
                         android:layout_gravity="center_vertical"
                         android:layout_marginTop="8dp"
-                        android:drawablePadding="8dp"
+                        android:background="?attr/selectableItemBackground"
+                        android:clickable="true"
+                        android:drawablePadding="12dp"
                         android:focusable="true"
                         android:gravity="center_vertical"
                         android:paddingStart="16dp"
                         android:paddingEnd="16dp"
                         android:text="@string/profile_edit_string"
-                        app:drawableLeftCompat="@drawable/ic_profil_fill"
-                        app:drawableRightCompat="@drawable/ic_chevron_right"/>
+                        android:textAppearance="@style/font_h4_regular"
+                        app:drawableLeftCompat="@drawable/ic_profil_fill_tb"
+                        app:drawableRightCompat="@drawable/ic_chevron_right_tb" />
 
                     <com.google.android.material.divider.MaterialDivider
                         android:id="@+id/divider_ed_password"
-                        android:visibility="gone"
                         android:layout_width="match_parent"
                         android:layout_height="1dp"
                         android:layout_marginStart="16dp"
-                        android:layout_marginEnd="16dp" />
+                        android:layout_marginEnd="16dp"
+                        android:visibility="gone" />
 
                     <!--  Edit Password  -->
                     <TextView
                         android:id="@+id/setting_edit_password"
-                        android:visibility="gone"
-                        android:textAppearance="@style/font_b1_regular"
                         style="@style/custom_color_drawable"
                         android:layout_width="match_parent"
-                        android:layout_height="48dp"
+                        android:layout_height="72dp"
                         android:background="?attr/selectableItemBackground"
                         android:clickable="true"
-                        android:drawablePadding="8dp"
+                        android:drawablePadding="12dp"
                         android:focusable="true"
                         android:gravity="center_vertical"
                         android:paddingStart="16dp"
                         android:paddingEnd="16dp"
                         android:text="@string/string_edit_password"
-                        app:drawableLeftCompat="@drawable/ic_key_edit_password"
-                        app:drawableRightCompat="@drawable/ic_chevron_right" />
+                        android:textAppearance="@style/font_h4_regular"
+                        android:visibility="gone"
+                        app:drawableLeftCompat="@drawable/ic_key_edit_password_tb"
+                        app:drawableRightCompat="@drawable/ic_chevron_right_tb" />
 
                     <com.google.android.material.divider.MaterialDivider
                         android:layout_width="match_parent"
@@ -177,10 +182,11 @@
                     <LinearLayout
                         android:id="@+id/setting_dark_mode"
                         android:layout_width="match_parent"
-                        android:layout_height="48dp"
+                        android:layout_height="72dp"
                         android:background="?attr/selectableItemBackground"
                         android:clickable="true"
                         android:focusable="true"
+                        android:gravity="center_vertical"
                         android:orientation="horizontal"
                         android:paddingStart="16dp"
                         android:paddingEnd="16dp"
@@ -188,13 +194,13 @@
 
                         <TextView
                             style="@style/custom_color_drawable"
-                            android:textAppearance="@style/font_b1_regular"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:drawablePadding="8dp"
+                            android:drawablePadding="12dp"
                             android:gravity="center_vertical"
                             android:text="@string/dark_mode"
-                            app:drawableLeftCompat="@drawable/ic_dark_mode" />
+                            android:textAppearance="@style/font_h4_regular"
+                            app:drawableLeftCompat="@drawable/ic_dark_mode_tb" />
 
                         <Space
                             android:layout_width="0dp"
@@ -206,34 +212,34 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:clickable="false"
-                            android:focusable="false"/>
+                            android:focusable="false" />
                     </LinearLayout>
 
                     <com.google.android.material.divider.MaterialDivider
-                        android:visibility="gone"
                         android:layout_width="match_parent"
                         android:layout_height="1dp"
                         android:layout_marginStart="16dp"
-                        android:layout_marginEnd="16dp" />
+                        android:layout_marginEnd="16dp"
+                        android:visibility="gone" />
 
                     <!--  Language  -->
                     <TextView
                         android:id="@+id/setting_language"
-                        android:textAppearance="@style/font_b1_regular"
-                        android:visibility="gone"
                         style="@style/custom_color_drawable"
                         android:layout_width="match_parent"
-                        android:layout_height="48dp"
+                        android:layout_height="72dp"
                         android:background="?attr/selectableItemBackground"
                         android:clickable="true"
-                        android:drawablePadding="8dp"
+                        android:drawablePadding="12dp"
                         android:focusable="true"
                         android:gravity="center_vertical"
                         android:paddingStart="16dp"
                         android:paddingEnd="16dp"
                         android:text="@string/language_string"
-                        app:drawableLeftCompat="@drawable/ic_language"
-                        app:drawableRightCompat="@drawable/ic_chevron_right"/>
+                        android:textAppearance="@style/font_b1_regular"
+                        android:visibility="gone"
+                        app:drawableLeftCompat="@drawable/ic_language_tb"
+                        app:drawableRightCompat="@drawable/ic_chevron_right_tb" />
 
                     <com.google.android.material.divider.MaterialDivider
                         android:layout_width="match_parent"
@@ -247,23 +253,22 @@
             <!--  Log Out Button  -->
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btn_logout"
-                android:textAppearance="@style/font_h6_semibold"
                 style="@style/btn_logout"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="16dp"
                 android:layout_marginBottom="16dp"
-                android:drawableEnd="@drawable/ic_arrow_logout"
+                android:drawableEnd="@drawable/ic_arrow_logout_tb"
                 android:elevation="8dp"
-                android:maxWidth="320dp"
-                android:minWidth="260dp"
-                android:padding="16dp"
-                app:cornerRadius="12dp"
+                android:maxWidth="640dp"
+                android:minWidth="520dp"
+                android:padding="24dp"
                 android:stateListAnimator="@null"
                 android:text="@string/log_out"
+                android:textAppearance="@style/font_h3_semibold"
+                app:cornerRadius="12dp"
                 tools:ignore="TextContrastCheck" />
         </LinearLayout>
     </ScrollView>
-
 </FrameLayout>

@@ -60,10 +60,10 @@ class VideoListActivity : AppCompatActivity() {
             }
         }
     }
-    override fun onResume() {
-        super.onResume()
-        showListVideo()
-    }
+//    override fun onResume() {
+//        super.onResume()
+//        showListVideo()
+//    }
     companion object {
         const val TAG = "VideoList"
     }

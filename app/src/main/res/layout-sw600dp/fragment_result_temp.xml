@@ -16,10 +16,10 @@
 
     <androidx.appcompat.widget.AppCompatImageButton
         android:id="@+id/btn_scan_ok"
-        android:layout_width="48dp"
-        android:layout_height="48dp"
+        android:layout_width="96dp"
+        android:layout_height="96dp"
         android:layout_gravity="end"
-        android:layout_margin="16dp"
+        android:layout_margin="24dp"
         android:background="@null"
         android:foreground="?attr/selectableItemBackground"
         android:importantForAccessibility="no"
@@ -28,10 +28,10 @@
 
     <androidx.appcompat.widget.AppCompatImageButton
         android:id="@+id/btn_scan_cancel"
-        android:layout_width="48dp"
-        android:layout_height="48dp"
+        android:layout_width="96dp"
+        android:layout_height="96dp"
         android:layout_gravity="start"
-        android:layout_margin="16dp"
+        android:layout_margin="24dp"
         android:background="@null"
         android:foreground="?attr/selectableItemBackground"
         android:importantForAccessibility="no"
@@ -45,7 +45,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"
         android:layout_marginHorizontal="32dp"
-        android:layout_marginBottom="80dp"
+        android:layout_marginBottom="120dp"
         android:visibility="invisible"
         app:cardCornerRadius="12dp">
 
@@ -62,7 +62,7 @@
                 android:orientation="vertical">
 
                 <TextView
-                    style="@style/font_b1_regular"
+                    style="@style/font_h4_regular"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/string_scan_result" />
@@ -70,7 +70,7 @@
                 <TextView
                     android:id="@+id/tv_prediction_result"
                     android:layout_marginTop="8dp"
-                    style="@style/font_h5_bold"
+                    style="@style/font_h3_bold"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     tools:text="@string/predict_result" />
@@ -79,10 +79,10 @@
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btn_wayang_detail"
-                style="@style/btn_goToDetail"
+                style="@style/btn_goToDetail_tb"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:drawableEnd="@drawable/ic_chevron_right"
+                android:drawableEnd="@drawable/ic_chevron_right_tb"
                 android:gravity="center_vertical"
                 android:elevation="8dp"
                 android:paddingVertical="8dp"
@@ -108,7 +108,7 @@
             android:layout_height="wrap_content" />
 
         <TextView
-            style="@style/font_b1_regular"
+            style="@style/font_h5_regular"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/progres_scan_string"

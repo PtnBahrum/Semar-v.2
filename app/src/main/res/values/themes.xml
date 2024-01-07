@@ -241,8 +241,22 @@
         <item name="android:textColor">@color/neutral_900</item>
     </style>
 
+    <style name="item_wayang_text_tb" parent="@style/TextAppearance.AppCompat">
+        <item name="android:textSize">20sp</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:fontFamily">@font/poppins_regular</item>
+        <item name="android:textColor">@color/neutral_900</item>
+    </style>
+
     <style name="font_wayang_description" parent="@style/TextAppearance.AppCompat">
         <item name="android:textSize">12sp</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:fontFamily">@font/poppins_regular</item>
+        <item name="android:textColor">@color/neutral_900</item>
+    </style>
+
+    <style name="font_wayang_description_tb" parent="@style/TextAppearance.AppCompat">
+        <item name="android:textSize">20sp</item>
         <item name="android:includeFontPadding">false</item>
         <item name="android:fontFamily">@font/poppins_regular</item>
         <item name="android:textColor">@color/neutral_900</item>
@@ -253,6 +267,20 @@
         <item name="android:includeFontPadding">false</item>
         <item name="android:fontFamily">@font/poppins_regular</item>
         <item name="android:textColor">@color/neutral_900</item>
+    </style>
+
+    <style name="font_soal_kuis_tb" parent="@style/TextAppearance.AppCompat">
+        <item name="android:textSize">21sp</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:fontFamily">@font/poppins_regular</item>
+        <item name="android:textColor">@color/neutral_900</item>
+    </style>
+
+    <style name="font_score_tb" parent="@style/TextAppearance.AppCompat">
+        <item name="android:textSize">48sp</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:fontFamily">@font/poppins_semibold</item>
+        <item name="android:textColor">@color/brown_900</item>
     </style>
 
     <!--Input Text Column Style-->
@@ -296,6 +324,15 @@
         <item name="textAllCaps">false</item>
         <item name="android:textColor">@color/white</item>
         <item name="titleTextAppearance">@style/font_b1_regular</item>
+        <item name="android:textAppearance">@style/font_b1_regular</item>
+    </style>
+
+    <style name="btn_goToDetail_tb">
+        <item name="android:backgroundTint">@color/warning_900</item>
+        <item name="textAllCaps">false</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="titleTextAppearance">@style/font_h5_regular</item>
+        <item name="android:textAppearance">@style/font_h5_regular</item>
     </style>
 
     <!--Button Ok Reset Password Style-->
