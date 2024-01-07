@@ -5,6 +5,7 @@ import android.content.pm.ActivityInfo
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.text.Html
 import android.view.View
 import android.view.WindowInsetsController
 import androidx.activity.viewModels
@@ -57,7 +58,12 @@ class VideoDetailActivity : AppCompatActivity() {
                     videoIdYoutube = videoData.video_url
                     binding.videoNameToolbar.text = videoData.title
                     binding.tvNameVideo.text = videoData.title
-                    binding.tvDesc.text = videoData.description
+                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+                        binding.tvDesc.text = Html.fromHtml(videoData.description, Html.FROM_HTML_MODE_COMPACT)
+                    } else {
+                        @Suppress("DEPRECATION")
+                        binding.tvDesc.text = Html.fromHtml(videoData.description)
+                    }
                 }
 
                 is Result.Error -> {
