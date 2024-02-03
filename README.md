@@ -38,4 +38,4 @@ This Semar application has several features, including:
 
 ### Apk Download
 
-[![Download - Semar for Student](https://img.shields.io/badge/Download-Semar_for_Student-572705?style=for-the-badge&logo=https%3A%2F%2Fgithub.com%2FPtnBahrum%2FSemar-v.2%2Fassets%2F81005654%2F1d335d9e-825f-4b4f-a33d-4aa6ccf02f16)](https://drive.google.com/file/d/1HcAyQA7PtG_8yN-trAby69F7Gz3dYvrK/view?usp=sharing)
+[![Download - Semar for Student](https://img.shields.io/badge/Download-Semar_for_Student-572705?style=for-the-badge&logo=https%3A%2F%2Fgithub.com%2FPtnBahrum%2FSemar-v.2%2Fassets%2F81005654%2F1d335d9e-825f-4b4f-a33d-4aa6ccf02f16)](https://drive.usercontent.google.com/download?id=1HE6NSXCyRm-JQbdnAzc2YpnPO51hCAMr&export=download&authuser=0&confirm=t&uuid=176324b7-e7f4-4108-bd98-92229e14b5ff&at=APZUnTVsQ_feqa9LqRphMtZgO5_t:1706980388626)
