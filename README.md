@@ -38,4 +38,4 @@ This Semar application has several features, including:
 
 ### Apk Download
 
-[![Application Download](https://img.shields.io/github/watchers/jonsn0w/hyde.svg?style=social)](https://drive.google.com/file/d/1HcAyQA7PtG_8yN-trAby69F7Gz3dYvrK/view?usp=sharing)
+[![Application Download](https://drive.google.com/file/d/1HcAyQA7PtG_8yN-trAby69F7Gz3dYvrK/view?usp=sharing)](https://drive.google.com/file/d/1HcAyQA7PtG_8yN-trAby69F7Gz3dYvrK/view?usp=sharing)
