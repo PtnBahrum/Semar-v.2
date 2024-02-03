@@ -38,6 +38,6 @@ This Semar application has several features, including:
 
 ### Apk Download
 
-[![Actions Status][gh-actions-badge]]
+[![Actions Status][gh-actions-badge] https://drive.google.com/file/d/1HE6NSXCyRm-JQbdnAzc2YpnPO51hCAMr/view?usp=drive_link]
 
 [gh-actions-badge]: https://drive.google.com/file/d/1HcAyQA7PtG_8yN-trAby69F7Gz3dYvrK/view?usp=sharing
